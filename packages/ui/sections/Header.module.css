@@ -1,0 +1,15 @@
+/* Ported from troywarner/src/css/header.css */
+.header {
+  background-color: var(--color-primary-dark);
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.topLogo {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  padding: 12px 0;
+}

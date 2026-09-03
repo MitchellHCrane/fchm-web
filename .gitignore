@@ -1,0 +1,20 @@
+# dependencies
+/node_modules
+.pnpm-store
+
+# next / build output
+/.next
+/out
+
+# generated (rebuilt on every build by scripts/gen-redirects.mjs)
+/public/_redirects
+
+# misc
+.DS_Store
+*.pem
+.env
+.env.local
+.env*.local
+next-env.d.ts
+/coverage
+*.tsbuildinfo

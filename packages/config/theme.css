@@ -1,0 +1,19 @@
+/* Tailwind v4 design tokens — the shared brand preset.
+   Imported by app/globals.css via `@import "@config/theme.css";`
+   Keep in sync with ./tokens.ts */
+@theme {
+  --color-primary: #2ca4f2;
+  --color-primary-dark: #004e82;
+  --color-accent-green: #10b981;
+  --color-ink: #000000;
+  --color-paper: #ffffff;
+  --color-muted: #91959d;
+
+  --font-heading: var(--font-heading), "Source Sans 3", system-ui, sans-serif;
+  --font-body: var(--font-body), "Open Sans", system-ui, sans-serif;
+  --font-serif: var(--font-serif), "Bitter", Georgia, serif;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+}

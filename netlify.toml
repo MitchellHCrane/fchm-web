@@ -1,0 +1,25 @@
+# Reconstructed in-repo Netlify config (previously dashboard-only).
+# See docs/NETLIFY.md for the per-site settings this replaces.
+
+[build]
+  command = "pnpm build"     # `prebuild` runs scripts/gen-redirects.mjs
+  publish = "out"            # next.config.mjs -> output: "export"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NPM_FLAGS = "--version"    # let pnpm (packageManager field) drive install
+
+# public/_redirects (generated) carries the per-officer host routing.
+# Static-content redirects that are NOT host-derived go here instead.
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

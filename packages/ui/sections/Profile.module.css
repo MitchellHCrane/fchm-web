@@ -1,0 +1,66 @@
+/* Ported from troywarner/src/css/profile.css */
+.profileDiv {
+  display: flex;
+  max-width: 1024px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 8%;
+  padding: 64px 0;
+}
+
+.particleBg {
+  display: none;
+}
+
+.profileName,
+.nmls {
+  color: var(--color-primary-dark);
+  margin: 0;
+}
+
+.profileName {
+  margin-top: 16px;
+}
+
+.nmls {
+  padding-top: 6px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.profilePic {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  box-shadow: 0 8px 16px rgba(145, 149, 157, 0.3);
+}
+
+@media (min-width: 768px) {
+  .profileDiv {
+    padding: 8%;
+    margin: 0 auto;
+    min-height: calc(100vh - 240px);
+  }
+  .profileName {
+    margin-top: 0;
+  }
+  .particleBg {
+    display: block;
+  }
+  .profileGrid {
+    display: grid;
+    gap: 8%;
+    align-items: start;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    background: transparent;
+  }
+}
+
+@media (min-width: 1024px) {
+  .profileGrid {
+    align-items: center;
+  }
+}

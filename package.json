@@ -1,0 +1,38 @@
+{
+  "name": "fchm-web",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@9.5.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "gen:redirects": "tsx scripts/gen-redirects.mjs",
+    "predev": "tsx scripts/gen-redirects.mjs",
+    "dev": "next dev",
+    "prebuild": "tsx scripts/gen-redirects.mjs",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "validate:content": "tsx scripts/validate-content.ts",
+    "new:officer": "tsx scripts/new-officer.ts"
+  },
+  "dependencies": {
+    "next": "15.5.4",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.0",
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "eslint": "^9.17.0",
+    "eslint-config-next": "15.5.4",
+    "tailwindcss": "^4.0.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

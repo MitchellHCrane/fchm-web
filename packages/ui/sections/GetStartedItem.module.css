@@ -1,0 +1,58 @@
+/* Ported from troywarner/src/css/getStartedItem.css */
+.gridItem {
+  position: relative;
+  padding: 64px 16px 32px;
+  font-size: 24px;
+  text-align: center;
+  border-radius: var(--radius-md);
+  background-color: #fff;
+  margin: 32px 8%;
+  box-shadow: 0 8px 16px rgba(145, 149, 157, 0.3);
+}
+
+.getStartedIcon {
+  position: absolute;
+  top: -32px;
+  left: 16px;
+  height: 64px;
+  width: 64px;
+  background-color: #f5bb54;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--radius-md);
+}
+
+.getStartedIcon img {
+  height: 24px;
+  width: auto;
+}
+
+.getStartedCard,
+.getStartedCardP {
+  text-align: left;
+}
+
+.cardLink {
+  margin-top: 32px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-weight: 900;
+  color: var(--color-primary);
+}
+
+.cardLink img {
+  margin-left: 16px;
+  height: 16px;
+  width: auto;
+}
+
+@media (min-width: 768px) {
+  .gridItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
