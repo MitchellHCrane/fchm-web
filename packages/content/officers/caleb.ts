@@ -3,7 +3,7 @@ import { defineOfficer } from "@content/schema";
 // REVIEW: testimonial quotes live in calebAdams/src/Components/Testimonials.js
 /** Migrated from the `calebAdams` repo. DRAFT — verify before setting status: "live". */
 export default defineOfficer({
-  slug: "caleb-adams",
+  slug: "caleb",
   name: "Caleb Adams",
   firstName: "Caleb",
   credentialTitle: "Loan Officer",
@@ -13,7 +13,7 @@ export default defineOfficer({
   email: "caleb@firstclasshomemortgage.com",
 
   headshot: {
-    src: "/headshots/caleb-adams.jpg",
+    src: "/headshots/caleb.jpg",
     alt: "Caleb Adams, Loan Officer",
   },
   bio: "Hello! I'm Caleb, I look forward to helping you along your home buying experience. I've provided a few useful links to get you started.",

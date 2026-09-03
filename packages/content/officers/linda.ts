@@ -2,7 +2,7 @@ import { defineOfficer } from "@content/schema";
 
 /** Migrated from the `lindaskehan` repo. DRAFT — verify before setting status: "live". */
 export default defineOfficer({
-  slug: "linda-skehan",
+  slug: "linda",
   name: "Linda Skehan",
   firstName: "Linda",
   credentialTitle: "Loan Officer",
@@ -13,7 +13,7 @@ export default defineOfficer({
   email: "linda@firstclasshomemortgage.com",
 
   headshot: {
-    src: "/headshots/linda-skehan.jpg",
+    src: "/headshots/linda.jpg",
     alt: "Linda Skehan, Loan Officer",
   },
   bio: "Hello! I'm Linda, I look forward to helping you along your home buying experience. I've provided a few useful links to get you started.",

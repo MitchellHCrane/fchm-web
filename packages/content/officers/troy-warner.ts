@@ -1,6 +1,15 @@
 import { defineOfficer } from "@content/schema";
 
-/** Migrated from the `troywarner` repo (the original template). */
+/**
+ * Migrated from the `troywarner` repo (the original template).
+ *
+ * ⚠ DOMAIN: Troy's site is NOT on `*.1stclasshomemortgage.com`. The Netlify
+ * account has `troywarner.com` and `start.troywarner.com` (both deploy from
+ * GitHub). Decide whether Troy stays on his own apex domain (needs a small
+ * per-officer `domain` override + its own Netlify config) or moves under the
+ * wildcard as `troy.1stclasshomemortgage.com`. Kept as "draft" until then so it
+ * does not emit a wrong `troy-warner.1stclasshomemortgage.com` redirect.
+ */
 export default defineOfficer({
   slug: "troy-warner",
   name: "Troy Warner",
@@ -31,5 +40,5 @@ export default defineOfficer({
     socialverseId: "a4b7e21d-36b5-4091-887e-560ebe606a4a",
   },
 
-  status: "live",
+  status: "draft", // see DOMAIN note above
 });

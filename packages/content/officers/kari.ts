@@ -2,7 +2,7 @@ import { defineOfficer } from "@content/schema";
 
 /** Migrated from the `karifitzgerald` repo. DRAFT — verify before setting status: "live". */
 export default defineOfficer({
-  slug: "kari-fitzgerald",
+  slug: "kari",
   name: "Kari Fitzgerald",
   firstName: "Kari",
   credentialTitle: "Senior Loan Officer",
@@ -13,7 +13,7 @@ export default defineOfficer({
   email: "kari@utahlender.com",
 
   headshot: {
-    src: "/headshots/kari-fitzgerald.jpeg",
+    src: "/headshots/kari.jpeg",
     alt: "Kari Fitzgerald, Senior Loan Officer",
   },
   bio: "Hello! I'm Kari, I look forward to helping you along your home buying experience. I've provided a few useful links to get you started.",

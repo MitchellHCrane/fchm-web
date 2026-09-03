@@ -1,5 +1,12 @@
 # Officer data extraction — review notes
 
+> Slugs were renamed to the **real live subdomains** from the Netlify site list
+> (`packages/content/subdomains.txt`). `linda-skehan` → `linda`, `eric-shank` →
+> `erick`, `kris-matyas` → `mortgagerebel`, etc. `deloy-griffin.ts` was deleted
+> (it's an older iteration of the site now at `deloy.`, not a separate URL).
+> Three need a domain decision: **troy-warner** (on `troywarner.com`, not the
+> wildcard), **jourdan** and **tresa** (no live Netlify site found).
+
 All 26 officer records in `packages/content/officers/*.ts` were auto-extracted
 from the old CRA repos with best-effort regex. **Every record is `status: "draft"`
 except `troy-warner`.** Verify each against its source repo before flipping to

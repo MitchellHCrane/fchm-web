@@ -2,7 +2,7 @@ import { defineOfficer } from "@content/schema";
 
 /** Migrated from the `casseystanger` repo. DRAFT — verify before setting status: "live". */
 export default defineOfficer({
-  slug: "cassey-stanger",
+  slug: "cassey",
   name: "Cassey Stanger",
   firstName: "Cassey",
   credentialTitle: "Mortgage Loan Officer",
@@ -12,7 +12,7 @@ export default defineOfficer({
   email: "cs@firstclasshomemortgage.com",
 
   headshot: {
-    src: "/headshots/cassey-stanger.jpeg",
+    src: "/headshots/cassey.jpeg",
     alt: "Cassey Stanger, Mortgage Loan Officer",
   },
   bio: "Hello! I'm Cassey, I look forward to helping you along your home buying experience. I've provided a few useful links to get you started.",

@@ -1,8 +1,10 @@
 import { defineOfficer } from "@content/schema";
 
-/** Migrated from the `jourdancampbell` repo. DRAFT — verify before setting status: "live". */
+/** Migrated from the `jourdancampbell` repo. DRAFT.
+ *  ⚠ NOT currently deployed — no matching Netlify site in the account list.
+ *  Confirm the intended subdomain before setting status: "live". */
 export default defineOfficer({
-  slug: "jourdan-campbell",
+  slug: "jourdan",
   name: "Jourdan Campbell",
   firstName: "Jourdan",
   credentialTitle: "Mortgage Banker",
@@ -12,7 +14,7 @@ export default defineOfficer({
   email: "jourdan@firstclasshomemortgage.com",
 
   headshot: {
-    src: "/headshots/jourdan-campbell.jpeg",
+    src: "/headshots/jourdan.jpeg",
     alt: "Jourdan Campbell, Mortgage Banker",
   },
   bio: "Hello! I'm Jourdan, I look forward to helping you along your home buying experience. I've provided a few useful links to get you started.",

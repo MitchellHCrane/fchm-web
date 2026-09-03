@@ -2,7 +2,7 @@ import { defineOfficer } from "@content/schema";
 
 /** Migrated from the `bruceIngramNew` repo. DRAFT — verify before setting status: "live". */
 export default defineOfficer({
-  slug: "bruce-ingram",
+  slug: "bruce",
   name: "Bruce Ingram",
   firstName: "Bruce",
   credentialTitle: "Mortgage Loan Originator",
@@ -12,7 +12,7 @@ export default defineOfficer({
   email: "bruce@firstclasshomemortgage.com",
 
   headshot: {
-    src: "/headshots/bruce-ingram.jpeg",
+    src: "/headshots/bruce.jpeg",
     alt: "Bruce Ingram, Mortgage Loan Originator",
   },
   bio: "Hello! I'm Bruce, I look forward to helping you along your home buying experience. I've provided a few useful links to get you started.",

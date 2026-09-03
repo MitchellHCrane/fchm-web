@@ -2,7 +2,7 @@ import { defineOfficer } from "@content/schema";
 
 /** Migrated from the `tiffanyBartnicki` repo. DRAFT — verify before setting status: "live". */
 export default defineOfficer({
-  slug: "tiffany-bartnicki",
+  slug: "tiffany",
   name: "Tiffany Bartnicki",
   firstName: "Tiffany",
   credentialTitle: "Loan Originator",
@@ -13,7 +13,7 @@ export default defineOfficer({
   email: "tiffany@firstclasshomemortgage.com",
 
   headshot: {
-    src: "/headshots/tiffany-bartnicki.jpeg",
+    src: "/headshots/tiffany.jpeg",
     alt: "Tiffany Bartnicki, Loan Originator",
   },
   bio: "Hello! I'm Tiffany, I look forward to helping you along your home buying experience. I've provided a few useful links to get you started.",

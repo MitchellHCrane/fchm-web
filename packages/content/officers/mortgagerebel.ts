@@ -2,7 +2,7 @@ import { defineOfficer } from "@content/schema";
 
 /** Migrated from the `kris-matyas` repo. DRAFT — verify before setting status: "live". */
 export default defineOfficer({
-  slug: "kris-matyas",
+  slug: "mortgagerebel",
   name: "Kris Matyas",
   firstName: "Kris",
   credentialTitle: "Mortgage Broker",
@@ -12,7 +12,7 @@ export default defineOfficer({
   email: "kris@firstclasshomemortgage.com",
 
   headshot: {
-    src: "/headshots/kris-matyas.jpg",
+    src: "/headshots/mortgagerebel.jpg",
     alt: "Kris Matyas, Mortgage Broker",
   },
   bio: "Hello! I'm Kris, I look forward to helping you along your home buying experience. I've provided a few useful links to get you started.",

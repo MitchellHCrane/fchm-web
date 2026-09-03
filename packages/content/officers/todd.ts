@@ -2,7 +2,7 @@ import { defineOfficer } from "@content/schema";
 
 /** Migrated from the `toddRodocker` repo. DRAFT — verify before setting status: "live". */
 export default defineOfficer({
-  slug: "todd-rodocker",
+  slug: "todd",
   name: "Todd Rodocker",
   firstName: "Todd",
   credentialTitle: "Loan Officer",
@@ -12,7 +12,7 @@ export default defineOfficer({
   email: "toddrodocker@gmail.com",
 
   headshot: {
-    src: "/headshots/todd-rodocker.jpg",
+    src: "/headshots/todd.jpg",
     alt: "Todd Rodocker, Loan Officer",
   },
   bio: "Hello! I'm Todd, I look forward to helping you along your home buying experience. I've provided a few useful links to get you started.",

@@ -2,7 +2,7 @@ import { defineOfficer } from "@content/schema";
 
 /** Migrated from the `sarahSpencer` repo. DRAFT — verify before setting status: "live". */
 export default defineOfficer({
-  slug: "sarah-spencer",
+  slug: "sarah",
   name: "Sarah Spencer",
   firstName: "Sarah",
   credentialTitle: "Loan Officer",
@@ -12,7 +12,7 @@ export default defineOfficer({
   email: "sarahspencerloans@gmail.com",
 
   headshot: {
-    src: "/headshots/sarah-spencer.png",
+    src: "/headshots/sarah.png",
     alt: "Sarah Spencer, Loan Officer",
   },
   bio: "Hello! I'm Sarah, I look forward to helping you along your home buying experience. I've provided a few useful links to get you started.",

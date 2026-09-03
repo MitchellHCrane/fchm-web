@@ -3,7 +3,7 @@ import { defineOfficer } from "@content/schema";
 // REVIEW: long bio; has calendly + FB/IG; filedrop email had capital J
 /** Migrated from the `jenniferMoore` repo. DRAFT — verify before setting status: "live". */
 export default defineOfficer({
-  slug: "jennifer-moore",
+  slug: "jennifer",
   name: "Jennifer Moore",
   firstName: "Jennifer",
   credentialTitle: "Loan Originator",
@@ -13,7 +13,7 @@ export default defineOfficer({
   email: "jennifer@firstclasshomemortgage.com",
 
   headshot: {
-    src: "/headshots/jennifer-moore.jpg",
+    src: "/headshots/jennifer.jpg",
     alt: "Jennifer Moore, Loan Originator",
   },
   bio: "I'm Jennifer, a leading loan originator specializing in all things home finance. My top priority is ensuring that my clients have the best experience and a solid financial plan tailored to their needs. I will provide my honest professi",

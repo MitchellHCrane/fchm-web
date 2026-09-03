@@ -2,7 +2,7 @@ import { defineOfficer } from "@content/schema";
 
 /** Migrated from the `kentbarker` repo. DRAFT — verify before setting status: "live". */
 export default defineOfficer({
-  slug: "kent-barker",
+  slug: "kent",
   name: "Kent Barker",
   firstName: "Kent",
   credentialTitle: "Mortgage Loan Officer",
@@ -13,7 +13,7 @@ export default defineOfficer({
   email: "kent@firstclasshomemortgage.com",
 
   headshot: {
-    src: "/headshots/kent-barker.png",
+    src: "/headshots/kent.png",
     alt: "Kent Barker, Mortgage Loan Officer",
   },
   bio: "Hello! I'm Kent, I look forward to helping you with your home buying experience. I've provided a few useful links to get you started.",

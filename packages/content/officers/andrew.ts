@@ -3,7 +3,7 @@ import { defineOfficer } from "@content/schema";
 // REVIEW: title 'Realtor, Owner and Principal Broker'; personal NMLS not found (regex caught corp #1843); blink slug was 'troywarner' (template leftover). Is Andrew a loan officer or a referral partner?
 /** Migrated from the `andrewAdams` repo. DRAFT — verify before setting status: "live". */
 export default defineOfficer({
-  slug: "andrew-adams",
+  slug: "andrew",
   name: "Andrew Adams",
   firstName: "Andrew",
   credentialTitle: "Realtor®, Owner and Principal Broker",
@@ -17,7 +17,7 @@ export default defineOfficer({
   email: "mail@askandrewadams.com",
 
   headshot: {
-    src: "/headshots/andrew-adams.jpeg",
+    src: "/headshots/andrew.jpeg",
     alt: "Andrew Adams, Realtor®, Owner and Principal Broker",
   },
   bio: "Hello! I'm Andrew, I look forward to helping you along your home buying experience. I've provided a few useful links to get you started.",

@@ -13,6 +13,28 @@
 | Redirects | `public/_redirects` (generated) + `netlify.toml` headers |
 | Env vars | none for the officer tier |
 
+## Live sites captured from the Netlify list (2026-09-02)
+
+Officer subdomains (all "Deploys from GitHub", plain CRA):
+`alan` · `andrew` · `bruce` · `caleb` · `cassey` · `deloy` · `eric` (Poulson) ·
+`erick` (Shank) · `ginny` · `james` · `jennifer` · `kari` · `kent` · `linda` ·
+`mortgagerebel` (Kris Matyas — **paused**) · `phil` · `raul` · `russ` · `sarah` ·
+`steve` (Jones) · `steves` (Summers) · `tiffany` · `todd` — all
+`<label>.1stclasshomemortgage.com`. Full list in
+`packages/content/subdomains.txt`.
+
+Not on the wildcard:
+- `troywarner.com` + `start.troywarner.com` — Troy's own domain (2 GitHub sites).
+- `referral.1stclasshomemortgage.com` (troyReferralSite; also historically
+  `troy.1stclasshomemortgage.com`).
+- `dpa.1stclasshomemortgage.com`, `1stclasshomemortgage.com`,
+  `firstclasshomemortgage.com` (Next.js).
+
+In the repos but **no live Netlify site**: `jourdancampbell`, `tresabertlshofer`.
+
+Unrelated sites in the account (ignore): seekifieds.com, dadjokewars.com,
+various `*imitation*` / `pdapichallenge` / `bamboo-*` / `mitchellhcrane`.
+
 ## Old sites — settings to export before decommissioning
 
 > Phase 0 task. The dashboard is the ONLY record of these. For each of the 31

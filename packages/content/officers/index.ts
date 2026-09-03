@@ -1,35 +1,36 @@
 import { officerSchema, type Officer } from "@content/schema";
 
 // One import per officer. `pnpm new:officer` appends here automatically.
+// The `slug` in each file is the LIVE subdomain label — do not change it
+// without a redirect (see packages/content/subdomains.txt).
+import alan from "./alan";
+import andrew from "./andrew";
+import bruce from "./bruce";
+import caleb from "./caleb";
+import cassey from "./cassey";
+import deloy from "./deloy";
+import eric from "./eric";
+import erick from "./erick";
+import ginny from "./ginny";
+import james from "./james";
+import jennifer from "./jennifer";
+import jourdan from "./jourdan";
+import kari from "./kari";
+import kent from "./kent";
+import linda from "./linda";
+import mortgagerebel from "./mortgagerebel";
+import phil from "./phil";
+import raul from "./raul";
+import russ from "./russ";
+import sarah from "./sarah";
+import steve from "./steve";
+import steves from "./steves";
+import tiffany from "./tiffany";
+import todd from "./todd";
+import tresa from "./tresa";
 import troyWarner from "./troy-warner";
-import alanCooper from "./alan-cooper";
-import andrewAdams from "./andrew-adams";
-import bruceIngram from "./bruce-ingram";
-import calebAdams from "./caleb-adams";
-import casseyStanger from "./cassey-stanger";
-import deloyGriff from "./deloy-griff";
-import deloyGriffin from "./deloy-griffin";
-import ericPoulson from "./eric-poulson";
-import ericShank from "./eric-shank";
-import ginnyBrimley from "./ginny-brimley";
-import jamesThompson from "./james-thompson";
-import jenniferMoore from "./jennifer-moore";
-import jourdanCampbell from "./jourdan-campbell";
-import kariFitzgerald from "./kari-fitzgerald";
-import kentBarker from "./kent-barker";
-import krisMatyas from "./kris-matyas";
-import lindaSkehan from "./linda-skehan";
-import philWillson from "./phil-willson";
-import raulLaveiru from "./raul-laveiru";
-import russWarner from "./russ-warner";
-import sarahSpencer from "./sarah-spencer";
-import steveJones from "./steve-jones";
-import steveSummers from "./steve-summers";
-import tiffanyBartnicki from "./tiffany-bartnicki";
-import toddRodocker from "./todd-rodocker";
-import tresaBertlshofer from "./tresa-bertlshofer";
 
-const RAW = [troyWarner, alanCooper, andrewAdams, bruceIngram, calebAdams, casseyStanger, deloyGriff, deloyGriffin, ericPoulson, ericShank, ginnyBrimley, jamesThompson, jenniferMoore, jourdanCampbell, kariFitzgerald, kentBarker, krisMatyas, lindaSkehan, philWillson, raulLaveiru, russWarner, sarahSpencer, steveJones, steveSummers, tiffanyBartnicki, toddRodocker, tresaBertlshofer];
+const RAW = [alan, andrew, bruce, caleb, cassey, deloy, eric, erick, ginny, james, jennifer, jourdan, kari, kent, linda, mortgagerebel, phil, raul, russ, sarah, steve, steves, tiffany, todd, tresa, troyWarner];
 
 /** Validated, defaults-applied officer records, keyed by slug. */
 export const officers: Officer[] = RAW.map((raw, i) => {

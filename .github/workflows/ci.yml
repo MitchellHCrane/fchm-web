@@ -28,6 +28,9 @@ jobs:
       - name: Validate officer content
         run: pnpm validate:content
 
+      - name: Subdomain guard (URL preservation)
+        run: pnpm check:subdomains
+
       - name: Typecheck
         run: pnpm typecheck
 
@@ -37,7 +40,5 @@ jobs:
       - name: Build (static export)
         run: pnpm build
 
-      - name: Assert per-officer redirect blocks
-        run: |
-          test -f public/_redirects
-          grep -q "1stclasshomemortgage.com/\*" public/_redirects
+      - name: Assert _redirects generated
+        run: test -s public/_redirects

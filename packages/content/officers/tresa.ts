@@ -1,8 +1,10 @@
 import { defineOfficer } from "@content/schema";
 
-/** Migrated from the `tresabertlshofer` repo. DRAFT — verify before setting status: "live". */
+/** Migrated from the `tresabertlshofer` repo. DRAFT.
+ *  ⚠ NOT currently deployed — no matching Netlify site in the account list.
+ *  Confirm the intended subdomain before setting status: "live". */
 export default defineOfficer({
-  slug: "tresa-bertlshofer",
+  slug: "tresa",
   name: "Tresa Bertlshofer",
   firstName: "Tresa",
   credentialTitle: "Mortgage Loan Officer",
@@ -13,7 +15,7 @@ export default defineOfficer({
   email: "tresa@firstclasshomemortgage.com",
 
   headshot: {
-    src: "/headshots/tresa-bertlshofer.jpeg",
+    src: "/headshots/tresa.jpeg",
     alt: "Tresa Bertlshofer, Mortgage Loan Officer",
   },
   bio: "Hello! I'm Tresa, I look forward to helping you along your home buying experience. I've provided a few useful links to get you started.",

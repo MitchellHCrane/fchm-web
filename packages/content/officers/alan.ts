@@ -2,7 +2,7 @@ import { defineOfficer } from "@content/schema";
 
 /** Migrated from the `alanCooper` repo. DRAFT — verify before setting status: "live". */
 export default defineOfficer({
-  slug: "alan-cooper",
+  slug: "alan",
   name: "Alan Cooper",
   firstName: "Alan",
   credentialTitle: "Mortgage Broker",
@@ -13,7 +13,7 @@ export default defineOfficer({
   email: "alan@firstclasshomemortgage.com",
 
   headshot: {
-    src: "/headshots/alan-cooper.jpg",
+    src: "/headshots/alan.jpg",
     alt: "Alan Cooper, Mortgage Broker",
   },
   bio: "Hello I'm Alan, I help families obtain the American Dream, one home at a time! I look forward to helping you along your home buying experience. I've provided a few useful links to get you started.",

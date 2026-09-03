@@ -2,7 +2,7 @@ import { defineOfficer } from "@content/schema";
 
 /** Migrated from the `ginnybrimley` repo. DRAFT — verify before setting status: "live". */
 export default defineOfficer({
-  slug: "ginny-brimley",
+  slug: "ginny",
   name: "Ginny Brimley",
   firstName: "Ginny",
   credentialTitle: "Mortgage Loan Officer",
@@ -13,7 +13,7 @@ export default defineOfficer({
   email: "ginny@firstclasshomemortgage.com",
 
   headshot: {
-    src: "/headshots/ginny-brimley.jpeg",
+    src: "/headshots/ginny.jpeg",
     alt: "Ginny Brimley, Mortgage Loan Officer",
   },
   bio: "Hello! I'm Ginny, I look forward to helping you along your home buying experience. I've provided a few useful links to get you started.",

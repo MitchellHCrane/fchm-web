@@ -3,7 +3,7 @@ import { defineOfficer } from "@content/schema";
 // REVIEW: review link is a Zillow lender-profile URL, kept as custom reviewUrl
 /** Migrated from the `erickshank` repo. DRAFT — verify before setting status: "live". */
 export default defineOfficer({
-  slug: "eric-shank",
+  slug: "erick",
   name: "Erick Shank",
   firstName: "Erick",
   credentialTitle: "Senior Loan Officer",
@@ -13,7 +13,7 @@ export default defineOfficer({
   email: "erick@firstclasshomemortgage.com",
 
   headshot: {
-    src: "/headshots/eric-shank.jpg",
+    src: "/headshots/erick.jpg",
     alt: "Erick Shank, Senior Loan Officer",
   },
   bio: "Hello! I'm Erick, I look forward to helping you along your home buying experience. I've provided a few useful links to get you started.",
