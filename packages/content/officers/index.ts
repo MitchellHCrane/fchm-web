@@ -28,9 +28,9 @@ import steves from "./steves";
 import tiffany from "./tiffany";
 import todd from "./todd";
 import tresa from "./tresa";
-import troyWarner from "./troy-warner";
+import troy from "./troy";
 
-const RAW = [alan, andrew, bruce, caleb, cassey, deloy, eric, erick, ginny, james, jennifer, jourdan, kari, kent, linda, mortgagerebel, phil, raul, russ, sarah, steve, steves, tiffany, todd, tresa, troyWarner];
+const RAW = [alan, andrew, bruce, caleb, cassey, deloy, eric, erick, ginny, james, jennifer, jourdan, kari, kent, linda, mortgagerebel, phil, raul, russ, sarah, steve, steves, tiffany, todd, tresa, troy];
 
 /** Validated, defaults-applied officer records, keyed by slug. */
 export const officers: Officer[] = RAW.map((raw, i) => {

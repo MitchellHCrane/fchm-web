@@ -22,7 +22,7 @@ jennifer      jennifer.1stclasshomemortgage.com       live
 kari          kari.1stclasshomemortgage.com           live
 kent          kent.1stclasshomemortgage.com           live
 linda         linda.1stclasshomemortgage.com          live
-mortgagerebel mortgagerebel.1stclasshomemortgage.com  paused # Kris Matyas — Netlify site is paused
+mortgagerebel mortgagerebel.1stclasshomemortgage.com  live   # Kris Matyas — Netlify site is paused; un-pause at cutover
 phil          phil.1stclasshomemortgage.com           live
 raul          raul.1stclasshomemortgage.com           live
 russ          russ.1stclasshomemortgage.com           live
@@ -32,14 +32,16 @@ steves        steves.1stclasshomemortgage.com         live   # Steve Summers
 tiffany       tiffany.1stclasshomemortgage.com        live
 todd          todd.1stclasshomemortgage.com           live
 
-# Not on the wildcard — needs a decision:
-troy-warner   troywarner.com / start.troywarner.com   apex   # Troy's own domain, not *.1stclasshomemortgage.com
+# Troy moves onto the wildcard (was troywarner.com / start.troywarner.com — those
+# should 301 here at cutover). Confirm troy.1stclasshomemortgage.com is free
+# first (it was historically an alias of the referral site).
+troy          troy.1stclasshomemortgage.com           live
 
-# In the repos but NO live Netlify site found (deleted? never deployed?):
-jourdan       -                                       none   # Jourdan Campbell
-tresa         -                                       none   # Tresa Bertlshofer
+# Old Netlify sites were DELETED. Records kept in officers/ for restore.
+jourdan       -                                       deleted  # Jourdan Campbell
+tresa         -                                       deleted  # Tresa Bertlshofer
 
 # Microsites / company (later phases):
-referral      referral.1stclasshomemortgage.com       live   # also historically troy.1stclasshomemortgage.com, start.troywarner.com
+referral      referral.1stclasshomemortgage.com       live   # also historically troy., start.troywarner.com
 dpa           dpa.1stclasshomemortgage.com            live
 company       1stclasshomemortgage.com + firstclasshomemortgage.com  live

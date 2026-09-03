@@ -3,15 +3,14 @@ import { defineOfficer } from "@content/schema";
 /**
  * Migrated from the `troywarner` repo (the original template).
  *
- * ⚠ DOMAIN: Troy's site is NOT on `*.1stclasshomemortgage.com`. The Netlify
- * account has `troywarner.com` and `start.troywarner.com` (both deploy from
- * GitHub). Decide whether Troy stays on his own apex domain (needs a small
- * per-officer `domain` override + its own Netlify config) or moves under the
- * wildcard as `troy.1stclasshomemortgage.com`. Kept as "draft" until then so it
- * does not emit a wrong `troy-warner.1stclasshomemortgage.com` redirect.
+ * DOMAIN: moves onto the wildcard as `troy.1stclasshomemortgage.com` (decision
+ * 2026-09-02). The old `troywarner.com` / `start.troywarner.com` sites should
+ * 301 to it at cutover. NOTE: `troy.1stclasshomemortgage.com` was historically
+ * an alias of the referral site (now primary at `referral.`) — confirm it's
+ * free before pointing DNS.
  */
 export default defineOfficer({
-  slug: "troy-warner",
+  slug: "troy",
   name: "Troy Warner",
   firstName: "Troy",
   credentialTitle: "Mortgage Banker",
@@ -22,7 +21,7 @@ export default defineOfficer({
   email: "loans@troywarner.com",
 
   headshot: {
-    src: "/headshots/troy-warner.jpg",
+    src: "/headshots/troy.jpg",
     alt: "Troy Warner, Mortgage Banker",
     width: 800,
     height: 800,
@@ -40,5 +39,5 @@ export default defineOfficer({
     socialverseId: "a4b7e21d-36b5-4091-887e-560ebe606a4a",
   },
 
-  status: "draft", // see DOMAIN note above
+  status: "live", // pilot — fully migrated & verified
 });

@@ -1,8 +1,9 @@
 import { defineOfficer } from "@content/schema";
 
-/** Migrated from the `tresabertlshofer` repo. DRAFT.
- *  ⚠ NOT currently deployed — no matching Netlify site in the account list.
- *  Confirm the intended subdomain before setting status: "live". */
+/** Migrated from the `tresabertlshofer` repo.
+ *  RETIRED: the Netlify site was deleted. Record kept so the site can be
+ *  restored — set status back to "draft", verify the data, add to
+ *  packages/content/subdomains.txt, then "live". */
 export default defineOfficer({
   slug: "tresa",
   name: "Tresa Bertlshofer",
@@ -23,5 +24,5 @@ export default defineOfficer({
   application: { kind: "blink", slug: "tresabertlshofer" },
   filedropUrl: "https://documentguardian.com/filedrop/tresa@firstclasshomemortgage.com",
 
-  status: "draft",
+  status: "retired",
 });
