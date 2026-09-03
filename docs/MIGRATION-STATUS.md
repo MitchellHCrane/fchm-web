@@ -19,7 +19,7 @@ subdomain until `"live"`). See `docs/EXTRACTION-REVIEW.md` for per-record caveat
 
 | Old repo | slug / live subdomain | Status | Notes |
 |---|---|---|---|
-| troywarner | troy-warner → **troywarner.com** | 🟨 ⚠ | apex domain, NOT `*.1stclasshomemortgage.com` — decide domain strategy |
+| troywarner | troy → **troy.1stclasshomemortgage.com** | 🟦 live | pilot; old `troywarner.com` + `start.troywarner.com` 301 here at cutover |
 | alanCooper | alan | 🟨 | `profileBackground: "plain"` |
 | andrewAdams | andrew | 🟨 ⚠ | Realtor title, only corp NMLS found, template app link — is this a LO site? |
 | bruceIngramNew | bruce | 🟨 | blink app URL |
@@ -31,10 +31,10 @@ subdomain until `"live"`). See `docs/EXTRACTION-REVIEW.md` for per-record caveat
 | ginnybrimley | ginny | 🟨 | own fax |
 | jamesThomson | james | 🟨 | folder/remote/name disagree — content says "Thompson"; yahoo email |
 | jenniferMoore | jennifer | 🟨 ⚠ | plain bg; long bio truncated; FB/IG/Calendly |
-| jourdancampbell | jourdan | 🟨 ⚠ | **no live Netlify site found** — confirm subdomain |
+| jourdancampbell | jourdan | 🗑 retired | Netlify site **deleted**; record kept for restore (not built/routed) |
 | karifitzgerald | kari | 🟨 | plain bg; blink URL; own fax; utahlender.com email |
 | kentbarker | kent | 🟨 | own fax; .png headshot |
-| kris-matyas | mortgagerebel | 🟨 ⚠ | Netlify site is **paused**; blink slug `themortgagerebel`; Calendly |
+| kris-matyas | mortgagerebel | 🟨 ⚠ | kept; Netlify site **paused** — un-pause at cutover; blink slug `themortgagerebel` |
 | lindaskehan | linda | 🟨 | own fax + review link; large headshot |
 | philWillson | phil | 🟨 ⚠ | name "Phillip"; phone == fax; loanforce.net email |
 | raulLaveiru | raul | 🟨 ⚠ | my1003 URL had a 9-digit id; using NMLS 2223020 |
@@ -44,7 +44,7 @@ subdomain until `"live"`). See `docs/EXTRACTION-REVIEW.md` for per-record caveat
 | steveSummers | steves | 🟨 | FB/IG; large headshot |
 | tiffanyBartnicki | tiffany | 🟨 | blink app URL; own fax |
 | toddRodocker | todd | 🟨 | blink app URL; gmail email |
-| tresabertlshofer | tresa | 🟨 ⚠ | **no live Netlify site found** — confirm subdomain |
+| tresabertlshofer | tresa | 🗑 retired | Netlify site **deleted**; record kept for restore (not built/routed) |
 
 ## Tier 2 — microsites (Phase 4)
 
