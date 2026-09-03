@@ -6,7 +6,7 @@
   publish = "out"            # next.config.mjs -> output: "export"
 
 [build.environment]
-  NODE_VERSION = "20"
+  NODE_VERSION = "22"
   NPM_FLAGS = "--version"    # let pnpm (packageManager field) drive install
 
 # public/_redirects (generated) carries the per-officer host routing.

@@ -14,13 +14,12 @@
     "jsx": "preserve",
     "incremental": true,
     "plugins": [{ "name": "next" }],
-    "baseUrl": ".",
     "paths": {
-      "@ui/*": ["packages/ui/*"],
-      "@seo/*": ["packages/seo/*"],
-      "@config/*": ["packages/config/*"],
-      "@content/*": ["packages/content/*"],
-      "@assets/*": ["packages/assets/*"]
+      "@ui/*": ["./packages/ui/*"],
+      "@seo/*": ["./packages/seo/*"],
+      "@config/*": ["./packages/config/*"],
+      "@content/*": ["./packages/content/*"],
+      "@assets/*": ["./packages/assets/*"]
     }
   },
   "include": [
