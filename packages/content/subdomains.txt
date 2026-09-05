@@ -32,10 +32,10 @@ steves        steves.1stclasshomemortgage.com         live   # Steve Summers
 tiffany       tiffany.1stclasshomemortgage.com        live
 todd          todd.1stclasshomemortgage.com           live
 
-# Troy moves onto the wildcard (was troywarner.com / start.troywarner.com — those
-# should 301 here at cutover). Confirm troy.1stclasshomemortgage.com is free
-# first (it was historically an alias of the referral site).
-troy          troy.1stclasshomemortgage.com           live
+# Troy's LO/portfolio site: subdomain UNDECIDED (2026-09-04). troy.1stclasshomemortgage.com
+# is reserved for the separate referral microsite (see `referral` row below) —
+# confirmed NOT this site. troy.ts pulled back to status: "draft" until a
+# subdomain is picked; do not add a "troy live" row here for the LO site.
 
 # Old Netlify sites were DELETED. Records kept in officers/ for restore.
 jourdan       -                                       deleted  # Jourdan Campbell

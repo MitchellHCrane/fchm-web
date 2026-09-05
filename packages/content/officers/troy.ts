@@ -3,11 +3,11 @@ import { defineOfficer } from "@content/schema";
 /**
  * Migrated from the `troywarner` repo (the original template).
  *
- * DOMAIN: moves onto the wildcard as `troy.1stclasshomemortgage.com` (decision
- * 2026-09-02). The old `troywarner.com` / `start.troywarner.com` sites should
- * 301 to it at cutover. NOTE: `troy.1stclasshomemortgage.com` was historically
- * an alias of the referral site (now primary at `referral.`) — confirm it's
- * free before pointing DNS.
+ * DOMAIN: UNDECIDED (2026-09-04). `troy.1stclasshomemortgage.com` is reserved
+ * for a separate site (the referral microsite, `referral.` / `troy.` /
+ * `start.troywarner.com` — confirmed distinct from this LO/portfolio site).
+ * Pulled back to `status: "draft"` until a subdomain is picked for this
+ * record; do not re-flip to `"live"` on `troy.` — see docs/MIGRATION-STATUS.md.
  */
 export default defineOfficer({
   slug: "troy",
@@ -39,5 +39,5 @@ export default defineOfficer({
     socialverseId: "a4b7e21d-36b5-4091-887e-560ebe606a4a",
   },
 
-  status: "live", // pilot — fully migrated & verified
+  status: "draft", // pilot content fully migrated & verified; subdomain TBD — see header comment
 });

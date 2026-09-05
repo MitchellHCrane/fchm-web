@@ -19,25 +19,25 @@ subdomain until `"live"`). See `docs/EXTRACTION-REVIEW.md` for per-record caveat
 
 | Old repo | slug / live subdomain | Status | Notes |
 |---|---|---|---|
-| troywarner | troy → **troy.1stclasshomemortgage.com** | 🟦 live | pilot; old `troywarner.com` + `start.troywarner.com` 301 here at cutover |
+| troywarner | troy → *subdomain TBD* | 🟨 draft | pilot content fully migrated & verified; `troy.1stclasshomemortgage.com` confirmed reserved for the separate referral microsite (not this LO site) — pulled back to draft until a real subdomain is picked |
 | alanCooper | alan | 🟨 | `profileBackground: "plain"` |
-| andrewAdams | andrew | 🟨 ⚠ | Realtor title, only corp NMLS found, template app link — is this a LO site? |
+| andrewAdams | andrew | 🟨 | Realtor title, only corp NMLS found, template app link — confirmed intended |
 | bruceIngramNew | bruce | 🟨 | blink app URL |
-| calebAdams | caleb | 🟨 ⚠ | testimonials array not yet populated |
+| calebAdams | caleb | 🟨 | testimonials array intentionally empty — confirmed |
 | casseystanger | cassey | 🟨 | |
-| deloyGriff2 (+ deloyGriffin) | deloy | 🟨 ⚠ | both old repos → one site; deloyGriffin.ts removed; fax from deloyGriffin |
-| ericPoulson | eric | 🟨 ⚠ | plain bg; long bio truncated; socialVerse/introVideo ids TODO; rs@3 |
-| erickshank | erick | 🟨 ⚠ | reviewUrl is a Zillow link |
+| deloyGriff2 (+ deloyGriffin) | deloy | 🟨 | both old repos → one site; deloyGriffin.ts removed; fax from deloyGriffin — confirmed intended |
+| ericPoulson | eric | 🟨 | plain bg; long bio truncated; socialVerse/introVideo ids left as placeholders — confirmed intended |
+| erickshank | erick | 🟨 | reviewUrl is a Zillow link — confirmed intended |
 | ginnybrimley | ginny | 🟨 | own fax |
 | jamesThomson | james | 🟨 | folder/remote/name disagree — content says "Thompson"; yahoo email |
-| jenniferMoore | jennifer | 🟨 ⚠ | plain bg; long bio truncated; FB/IG/Calendly |
+| jenniferMoore | jennifer | 🟨 | plain bg; long bio truncated; FB/IG/Calendly — confirmed intended |
 | jourdancampbell | jourdan | 🗑 retired | Netlify site **deleted**; record kept for restore (not built/routed) |
 | karifitzgerald | kari | 🟨 | plain bg; blink URL; own fax; utahlender.com email |
 | kentbarker | kent | 🟨 | own fax; .png headshot |
 | kris-matyas | mortgagerebel | 🟨 ⚠ | kept; Netlify site **paused** — un-pause at cutover; blink slug `themortgagerebel` |
 | lindaskehan | linda | 🟨 | own fax + review link; large headshot |
-| philWillson | phil | 🟨 ⚠ | name "Phillip"; phone == fax; loanforce.net email |
-| raulLaveiru | raul | 🟨 ⚠ | my1003 URL had a 9-digit id; using NMLS 2223020 |
+| philWillson | phil | 🟨 | name "Phillip"; phone == fax; loanforce.net email — confirmed intended |
+| raulLaveiru | raul | 🟨 | my1003 URL had a 9-digit id; using NMLS 2223020 — confirmed intended |
 | russWarner | russ | 🟨 | gmail email |
 | sarahSpencer | sarah | 🟨 | gmail email; .png headshot |
 | steveJones | steve | 🟨 | blink app URL |
