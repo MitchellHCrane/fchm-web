@@ -54,14 +54,14 @@ export default async function CareersPage({ params }: { params: Params }) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-gray-100 rounded-2xl p-6 md:p-10 shadow-md">
             <h2 className="text-2xl font-semibold text-[#2ca4f2]">Mentorship That Drives Success</h2>
-            <p className="mt-2">
+            <p className="mt-2 text-lg text-gray-700">
               Learn from the best — work directly with our CEO, <strong>Troy Warner</strong>, an award-winning loan officer.
               Discover proven strategies to close more deals, more efficiently.
             </p>
           </div>
           <div className="bg-gray-100 rounded-2xl p-6 md:p-10 shadow-md">
             <h2 className="text-2xl font-semibold text-[#2ca4f2]">Maximize Your Earnings</h2>
-            <p className="mt-2">
+            <p className="mt-2 text-lg text-gray-700">
               Our flat-fee commission model means you keep more of what you earn — paired with industry-leading tools and a
               constantly growing network of lenders and products.
             </p>
@@ -71,14 +71,14 @@ export default async function CareersPage({ params }: { params: Params }) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
           <div className="bg-gray-100 rounded-2xl p-6 md:p-10 shadow-md">
             <h2 className="text-2xl font-semibold text-[#2ca4f2]">Total Support, Total Confidence</h2>
-            <p className="mt-2">
+            <p className="mt-2 text-lg text-gray-700">
               From 24/7 operations support to unique loan products and a dedicated corporate team, you&apos;ll have everything
               you need to take your borrowers from application to closing — fast.
             </p>
           </div>
           <div className="bg-gray-100 rounded-2xl p-6 md:p-10 shadow-md">
             <h2 className="text-2xl font-semibold text-[#2ca4f2]">Build Your Network. Grow Your Business.</h2>
-            <p className="mt-2">
+            <p className="mt-2 text-lg text-gray-700">
               Join an engaged, high-performing community of loan originators and elevate your career with powerful
               connections, continuous learning, and shared success.
             </p>
