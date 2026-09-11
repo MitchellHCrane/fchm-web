@@ -29,7 +29,7 @@ export const metadata: Metadata = buildPageMetadata({
  */
 export default function ReferralPage() {
   return (
-    <div className="App">
+    <div className="App legacy-typography">
       <JsonLd data={referralLocalBusinessSchema()} />
       <JsonLd data={faqPageSchema(referral.faq)} />
       <JsonLd

@@ -61,16 +61,35 @@
     background: var(--color-paper);
   }
 
-  h1, h2, h3 {
+  /*
+   * Scoped to .legacy-typography (the officer-template tree: OfficerSite,
+   * the referral microsite) rather than applied to bare tags globally.
+   *
+   * This is the original CRA officer sites' design — every <p>/<a>/<li> gets
+   * an automatic 16px top margin, matching the source. That's fine as long
+   * as it's the ONLY thing styling those tags. But it now shares one
+   * stylesheet with the Tailwind-driven company/dpa tiers, where bare
+   * <p>/<a> elements are meant to be blank canvases styled entirely by
+   * utility classes. A global rule here would only get overridden where a
+   * Tailwind utility happens to touch the same property (e.g. a `my-4`
+   * cancels margin-top) — anywhere it doesn't (most places), this legacy
+   * margin/color silently wins, e.g. it was pushing the nav's flex-anchored
+   * "Testimonials" link and the rotating Banner's <p>/<a> down by 16px.
+   */
+  .legacy-typography h1,
+  .legacy-typography h2,
+  .legacy-typography h3 {
     font-family: var(--font-heading);
     font-size: 24px;
     font-weight: 900;
     color: var(--color-primary-dark);
     letter-spacing: 1px;
   }
-  h1 { letter-spacing: 0.25px; }
+  .legacy-typography h1 { letter-spacing: 0.25px; }
 
-  p, a, li {
+  .legacy-typography p,
+  .legacy-typography a,
+  .legacy-typography li {
     font-family: var(--font-body);
     font-size: 18px;
     color: var(--color-muted);
@@ -79,7 +98,7 @@
     margin-top: 16px;
   }
 
-  a { text-decoration: none; color: var(--color-primary); }
+  .legacy-typography a { text-decoration: none; color: var(--color-primary); }
 
   /* Shared CTA button (was .buttonBlue) */
   .button-blue {

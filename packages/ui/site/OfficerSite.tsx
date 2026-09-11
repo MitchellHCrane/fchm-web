@@ -27,7 +27,7 @@ export function OfficerSite({ officer }: { officer: Officer }) {
   );
 
   return (
-    <div className="App">
+    <div className="App legacy-typography">
       {needsGidget && (
         <Script
           src="https://storage.googleapis.com/gidget-static/v.latest/gidget/gidget.esm.js"
