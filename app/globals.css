@@ -1,99 +1,117 @@
 @import "tailwindcss";
 @import "../packages/config/theme.css";
 
-/* --------------------------------------------------------------------------
-   Reset (Meyer 2.0, public domain) — ported verbatim from the CRA template's
-   src/css/reset.css
-   -------------------------------------------------------------------------- */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center, dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, figure,
-figcaption, footer, header, hgroup, menu, nav,
-output, ruby, section, summary, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section { display: block; }
-body { line-height: 1; }
-ol, ul { list-style: none; }
-blockquote, q { quotes: none; }
-blockquote:before, blockquote:after,
-q:before, q:after { content: ""; content: none; }
-table { border-collapse: collapse; border-spacing: 0; }
+/*
+ * Everything below is wrapped in @layer base so Tailwind's own `utilities`
+ * layer (text-4xl, text-white, font-bold, etc. — used throughout the
+ * company/referral/dpa tiers) can still override it.
+ *
+ * Tailwind's `@import "tailwindcss"` puts ALL of its output (reset,
+ * tokens, utilities) inside named CSS cascade layers. Per the CSS spec,
+ * UNLAYERED styles always win over layered styles regardless of
+ * specificity or source order — so leaving these rules unlayered made
+ * them silently override every Tailwind utility class on h1/h2/h3/p/a/li,
+ * which is every Tailwind-styled page in the app. @layer base puts these
+ * in the same precedence tier as Tailwind's own preflight, so the
+ * (later, higher-precedence) `utilities` layer wins as expected, while
+ * plain <h1>/<p>/<a> tags with no Tailwind classes (the officer/referral
+ * CSS-module sections) still fall back to this base styling.
+ */
+@layer base {
+  /* --------------------------------------------------------------------------
+     Reset (Meyer 2.0, public domain) — ported verbatim from the CRA template's
+     src/css/reset.css
+     -------------------------------------------------------------------------- */
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center, dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed, figure,
+  figcaption, footer, header, hgroup, menu, nav,
+  output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  article, aside, details, figcaption, figure,
+  footer, header, hgroup, menu, nav, section { display: block; }
+  body { line-height: 1; }
+  ol, ul { list-style: none; }
+  blockquote, q { quotes: none; }
+  blockquote:before, blockquote:after,
+  q:before, q:after { content: ""; content: none; }
+  table { border-collapse: collapse; border-spacing: 0; }
 
-/* --------------------------------------------------------------------------
-   Base typography — ported from src/css/index.css + src/css/App.css
-   -------------------------------------------------------------------------- */
-html { scroll-behavior: smooth; }
+  /* --------------------------------------------------------------------------
+     Base typography — ported from src/css/index.css + src/css/App.css
+     -------------------------------------------------------------------------- */
+  html { scroll-behavior: smooth; }
 
-body {
-  font-family: var(--font-body);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: var(--color-paper);
-}
+  body {
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--color-paper);
+  }
 
-h1, h2, h3 {
-  font-family: var(--font-heading);
-  font-size: 24px;
-  font-weight: 900;
-  color: var(--color-primary-dark);
-  letter-spacing: 1px;
-}
-h1 { letter-spacing: 0.25px; }
-
-p, a, li {
-  font-family: var(--font-body);
-  font-size: 18px;
-  color: var(--color-muted);
-  line-height: 1.5;
-  letter-spacing: 0.75px;
-  margin-top: 16px;
-}
-
-a { text-decoration: none; color: var(--color-primary); }
-
-/* Shared CTA button (was .buttonBlue) */
-.button-blue {
-  width: 100%;
-  margin: 32px auto 0;
-  display: block;
-  background-color: var(--color-primary);
-  border: 1px solid var(--color-primary);
-  border-radius: var(--radius-md);
-  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px 0;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  font-family: var(--font-heading);
-  font-size: 18px;
-  font-weight: 900;
-  padding: 8px 32px;
-  text-align: center;
-  transform: translateY(0);
-  user-select: none;
-  transition: 0.3s;
-}
-.button-blue:hover {
-  box-shadow: 0 8px 16px rgba(145, 149, 157, 0.3);
-  transform: translateY(-2px);
-}
-@media (min-width: 1024px) {
-  .button-blue {
-    width: fit-content;
-    margin: 32px 0 0;
-    padding: 16px 32px;
+  h1, h2, h3 {
+    font-family: var(--font-heading);
     font-size: 24px;
+    font-weight: 900;
+    color: var(--color-primary-dark);
+    letter-spacing: 1px;
+  }
+  h1 { letter-spacing: 0.25px; }
+
+  p, a, li {
+    font-family: var(--font-body);
+    font-size: 18px;
+    color: var(--color-muted);
+    line-height: 1.5;
+    letter-spacing: 0.75px;
+    margin-top: 16px;
+  }
+
+  a { text-decoration: none; color: var(--color-primary); }
+
+  /* Shared CTA button (was .buttonBlue) */
+  .button-blue {
+    width: 100%;
+    margin: 32px auto 0;
+    display: block;
+    background-color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    border-radius: var(--radius-md);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 900;
+    padding: 8px 32px;
+    text-align: center;
+    transform: translateY(0);
+    user-select: none;
+    transition: 0.3s;
+  }
+  .button-blue:hover {
+    box-shadow: 0 8px 16px rgba(145, 149, 157, 0.3);
+    transform: translateY(-2px);
+  }
+  @media (min-width: 1024px) {
+    .button-blue {
+      width: fit-content;
+      margin: 32px 0 0;
+      padding: 16px 32px;
+      font-size: 24px;
+    }
   }
 }
