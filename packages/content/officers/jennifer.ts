@@ -23,6 +23,7 @@ export default defineOfficer({
   calendlyUrl: "https://calendly.com/jennifer-firstclasshomemortgage/30-minute-discovery-call",
   social: { facebook: "https://www.facebook.com/MortgageswithJenniferMoore", instagram: "https://www.instagram.com/moore_than_mortgages_jen_moore/" },
   profileBackground: "plain",
+  heroBackground: { src: "/backgrounds/plain-hero.png" },
 
   status: "draft",
 });

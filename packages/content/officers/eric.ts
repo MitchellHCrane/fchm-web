@@ -22,6 +22,7 @@ export default defineOfficer({
   filedropUrl: "https://documentguardian.com/filedrop/ericp@firstclasshomemortgage.com",
   reviewUrl: "https://g.page/r/CZhd3TR7YiY_EAE/review",
   profileBackground: "plain",
+  heroBackground: { src: "/backgrounds/plain-hero.png" },
   sections: ["socialVerse","introVideo"],
 
   status: "draft",

@@ -159,6 +159,12 @@ export const officerSchema = z.object({
   sections: z.array(z.enum(OFFICER_SECTION_IDS)).optional(),
 
   profileBackground: z.enum(["particles", "plain"]).default("particles"),
+  /** only rendered when profileBackground is "plain" — a full-bleed hero
+   *  image behind the profile card (≥768px), matching what these sites
+   *  actually shipped instead of the particle canvas. */
+  heroBackground: z
+    .object({ src: z.string(), overlay: z.boolean().optional() })
+    .optional(),
 
   socialVerse: z
     .object({ venueId: z.string(), socialverseId: z.string() })

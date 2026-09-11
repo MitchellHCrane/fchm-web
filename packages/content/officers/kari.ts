@@ -21,6 +21,7 @@ export default defineOfficer({
   application: { kind: "blink", slug: "karifitzgerald" },
   filedropUrl: "https://documentguardian.com/filedrop/kari@firstclasshomemortgage.com",
   profileBackground: "plain",
+  heroBackground: { src: "/backgrounds/kari-hero.png" },
 
   status: "draft",
 });

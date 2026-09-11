@@ -21,6 +21,7 @@ export default defineOfficer({
   application: { kind: "my1003", nmls: "1912420" },
   filedropUrl: "https://documentguardian.com/filedrop/alan@firstclasshomemortgage.com",
   profileBackground: "plain",
+  heroBackground: { src: "/backgrounds/flag.jpg", overlay: true },
 
   status: "draft",
 });

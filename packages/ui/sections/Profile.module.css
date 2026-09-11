@@ -28,6 +28,10 @@
   font-weight: 400;
 }
 
+.profileP {
+  /* base paragraph styling is inherited from the global p{} rule */
+}
+
 .profilePic {
   display: block;
   margin: 0 auto;
@@ -35,6 +39,15 @@
   height: auto;
   border-radius: var(--radius-md);
   box-shadow: 0 8px 16px rgba(145, 149, 157, 0.3);
+}
+
+/* Hero background image, ported from the 4 officer sites that shipped a
+   custom bg instead of the particle canvas (alanCooper/america.jpg,
+   karifitzgerald/homeBackground.png, ericPoulson + jenniferMoore/background.png).
+   Set via the --hero-bg custom property (dynamic per officer) so the CSS
+   module doesn't need to know the actual file. Desktop-only, matching source. */
+.profilePOnImage {
+  /* color set in the media query below, same as source */
 }
 
 @media (min-width: 768px) {
@@ -56,6 +69,30 @@
     grid-template-columns: auto auto;
     grid-template-rows: auto;
     background: transparent;
+  }
+
+  .heroBg {
+    position: relative;
+    background-image: var(--hero-bg);
+    background-size: cover;
+    background-position: center;
+  }
+  .heroBg .profileGrid {
+    position: relative;
+    z-index: 2;
+  }
+  .profilePOnImage {
+    color: #575757;
+  }
+
+  /* Only alanCooper used the white overlay (a flag image needed the extra
+     contrast); the other three hero-bg sites render the image plain. */
+  .heroBgOverlay::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 1;
   }
 }
 

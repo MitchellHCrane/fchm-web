@@ -45,8 +45,15 @@ the full paragraph(s) from the source `Profile.js`.
   link (caleb, eric-poulson, eric-shank, linda).
 - **application** — `my1003` (uses NMLS) vs `blink` (uses a per-officer slug):
   both appear across the portfolio.
-- **profileBackground** — `plain` for alan-cooper, kari-fitzgerald, eric-poulson,
-  jennifer-moore; `particles` for the rest.
+- **profileBackground** — `plain` for alan, kari, eric, jennifer; `particles`
+  for the rest. **Fixed 2026-09-10:** "plain" isn't blank — all 4 shipped a
+  full-bleed hero image instead of the particle canvas (alan: an American
+  flag, `america.jpg`, with a white 90% overlay for contrast; kari: her own
+  `homeBackground.png`; eric + jennifer: the same shared generic
+  `background.png`). The initial port dropped all 4 images. Added
+  `Officer.heroBackground: { src, overlay? }` to the schema, copied the 4
+  files to `public/backgrounds/{flag,kari-hero,plain-hero}.{jpg,png}`, and
+  wired them into `@ui/sections/Profile`.
 
 ## Headshots to optimize
 
