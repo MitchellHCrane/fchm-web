@@ -1,23 +1,37 @@
 # fchm-web
 
 One repo, one Netlify site, one Next.js app — serving every First Class Home
-Mortgage loan-officer site (and, later, the microsites + company site).
+Mortgage site: the loan-officer subdomains, the referral and DPA microsites,
+and the company marketing site on both its apex domains.
 
-Replaces ~31 separate Create React App repos, each with its own Netlify site.
+Replaces 31 separate repos (24 loan-officer CRA apps, `troyReferralSite`,
+`dpa-1stclass`, `1stclassnextjs`, `1stclasshomemortgage`), each with its own
+Netlify site.
 
 ## How it works
 
-- Each officer is one data file: `packages/content/officers/<slug>.ts`
-  (validated against `packages/content/schema.ts`).
+- **Officers** — one data file each: `packages/content/officers/<slug>.ts`
+  (validated against `packages/content/schema.ts`), rendered at `/sites/<slug>/`.
+- **Referral microsite** — `packages/content/referral.ts` + `app/referral/`
+  (`referral.1stclasshomemortgage.com`).
+- **DPA microsite** — `packages/content/dpa.ts` (serializable rich text, not
+  JSX) + `app/dpa/` (`dpa.1stclasshomemortgage.com`).
+- **Company site** — `packages/content/company.ts` maps each apex domain to its
+  own address/phone (replacing per-domain `NEXT_PUBLIC_*` env vars, which can't
+  vary per request in one deploy) + `app/company/[domain]/`
+  (`1stclasshomemortgage.com`, `firstclasshomemortgage.com`).
 - Shared content (disclosures, corporate address, brand, links) lives once in
-  `packages/config/site.ts`.
-- Shared UI is in `packages/ui/`; shared SEO (metadata + JSON-LD) in `packages/seo/`.
-- `next build` static-exports the whole thing to `out/`. Each officer renders at
-  `/sites/<slug>/`.
+  `packages/config/site.ts`. Shared UI is namespaced per tier under
+  `packages/ui/{sections,company,referral,dpa}/`; shared SEO (metadata + JSON-LD)
+  in `packages/seo/`.
+- `next build` static-exports everything to `out/`.
 - `scripts/gen-redirects.mjs` (runs on `pre{dev,build}`) writes `public/_redirects`
-  with Netlify host rules: `https://<slug>.1stclasshomemortgage.com/*` →
-  `/sites/<slug>/`. A wildcard `*.1stclasshomemortgage.com` domain on the one
-  Netlify site routes every subdomain here.
+  with Netlify host rules — per-officer blocks generated from the data files,
+  plus static blocks for the referral/dpa/company hosts. A wildcard
+  `*.1stclasshomemortgage.com` domain (+ the company/microsite domains added
+  individually) on the one Netlify site routes every host here. Public URLs
+  (e.g. `/testimonials` on either company domain) never expose the internal
+  `/company/<domain>/...` route — the rewrite is server-side.
 
 ## Commands
 

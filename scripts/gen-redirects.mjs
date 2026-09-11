@@ -65,9 +65,33 @@ for (const o of officers) {
   );
 }
 
+// --- Tier 2/3: microsites + company (Phase 4/5) -----------------------------
+// These aren't per-officer data files, so the host list is static here.
+lines.push(
+  "# Tier 2 — microsites",
+  `https://referral.${DOMAIN}/robots.txt   /referral/robots.txt   200!`,
+  `https://referral.${DOMAIN}/sitemap.xml  /referral/sitemap.xml  200!`,
+  `https://referral.${DOMAIN}/*            /referral/:splat        200!`,
+  "",
+  `https://dpa.${DOMAIN}/robots.txt   /dpa/robots.txt   200!`,
+  `https://dpa.${DOMAIN}/sitemap.xml  /dpa/sitemap.xml  200!`,
+  `https://dpa.${DOMAIN}/*            /dpa/:splat        200!`,
+  "",
+  "# Tier 3 — company (both apex domains, from one build)",
+  `https://${DOMAIN}/robots.txt   /company/1stclasshomemortgage/robots.txt   200!`,
+  `https://${DOMAIN}/sitemap.xml  /company/1stclasshomemortgage/sitemap.xml  200!`,
+  `https://${DOMAIN}/*            /company/1stclasshomemortgage/:splat        200!`,
+  "",
+  "https://firstclasshomemortgage.com/robots.txt   /company/firstclasshomemortgage/robots.txt   200!",
+  "https://firstclasshomemortgage.com/sitemap.xml  /company/firstclasshomemortgage/sitemap.xml  200!",
+  "https://firstclasshomemortgage.com/*            /company/firstclasshomemortgage/:splat        200!",
+  "",
+);
+
 await writeFile(join(root, "public/_redirects"), lines.join("\n"), "utf8");
 console.log(
-  `gen-redirects: wrote public/_redirects — ${live} live host block(s), ` +
+  `gen-redirects: wrote public/_redirects — ${live} live officer host block(s), ` +
     `${officers.filter((o) => o.redirectTo).length} consolidation 301(s), ` +
-    `${officers.length} file(s) scanned.`,
+    `${officers.length} officer file(s) scanned, ` +
+    `+ referral/dpa/company (Tier 2/3, static).`,
 );

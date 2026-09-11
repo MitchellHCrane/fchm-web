@@ -1,0 +1,49 @@
+/* Ported from troyReferralSite/src/css/footer.css (no top margin — footer
+   directly follows the FAQ section, unlike the officer template). */
+.footer {
+  padding-bottom: 36px;
+  background: var(--color-primary-dark);
+  width: 100%;
+}
+
+.footerDiv {
+  display: grid;
+  max-width: 1024px;
+}
+
+.footerGridItem {
+  margin: 32px;
+}
+
+.footerH3,
+.footerP {
+  color: #fff;
+  margin: 0;
+}
+
+.footerH3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.footerP,
+.footerP a {
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0;
+  color: #fff;
+}
+
+@media (min-width: 1024px) {
+  .footerDiv {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-content: center;
+    text-align: center;
+    padding: 64px 0;
+    grid-gap: 48px;
+    margin: 0 auto;
+  }
+  .footerGridItem {
+    margin: 0;
+  }
+}

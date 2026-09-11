@@ -1,0 +1,53 @@
+/* Ported from troyReferralSite/src/css/faq.css */
+.faq {
+  max-width: 860px;
+  margin: 0 auto 64px;
+  padding: 0 8%;
+}
+
+.faqH2 {
+  font-size: 32px;
+  color: var(--color-primary-dark);
+  text-align: center;
+}
+
+.faqList {
+  margin-top: 32px;
+}
+
+.faqItem {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 16px 0;
+}
+
+.faqQuestion {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  padding-right: 28px;
+}
+
+.faqQuestion::-webkit-details-marker {
+  display: none;
+}
+
+.faqQuestion::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: -2px;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.faqItem[open] .faqQuestion::after {
+  content: "\2212";
+}
+
+.faqAnswer {
+  margin-top: 12px;
+}

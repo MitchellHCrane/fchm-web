@@ -1,0 +1,63 @@
+/* Ported from troyReferralSite/src/css/profile.css */
+.profileDiv {
+  display: flex;
+  max-width: 1024px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 8%;
+  padding: 64px 0;
+}
+
+.profileName,
+.nmls {
+  color: var(--color-primary-dark);
+  margin: 0;
+}
+
+.profileName {
+  margin-top: 16px;
+  font-size: 40px;
+}
+
+.profileTagline {
+  color: var(--color-primary-dark);
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+.profileP {
+  padding-bottom: 8px;
+}
+
+.centerDiv {
+  text-align: center;
+}
+
+.buttonBlueDiv {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .profileDiv {
+    padding: 8%;
+    margin: 0 auto;
+  }
+  .profileName {
+    margin-top: 0;
+  }
+  .profileGrid {
+    display: grid;
+    gap: 8%;
+    align-items: start;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    background: transparent;
+  }
+}
+
+@media (min-width: 1024px) {
+  .profileGrid {
+    align-items: center;
+  }
+}

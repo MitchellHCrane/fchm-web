@@ -1,0 +1,88 @@
+/* Ported from troyReferralSite/src/css/getStarted.css */
+.getStartedDiv {
+  background-color: #fff;
+  margin: 0 0 64px;
+}
+.incentivesEligibility {
+  margin: 64px 8%;
+}
+
+.getStartedBackground {
+  background-image: url(/backgrounds/get-started.png);
+  background-color: var(--color-primary);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 64px 8% 160px;
+  text-align: center;
+}
+
+.getStartedH2 {
+  margin-top: 96px;
+  font-size: 36px;
+  color: #fff;
+}
+
+.getStartedP {
+  color: #fff;
+}
+
+.programDetailsDiv {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  padding-bottom: 32px;
+}
+
+.programDetailsH2 {
+  font-size: 32px;
+  margin-left: 8px;
+}
+
+.topSpacing {
+  margin-top: 64px;
+}
+
+.dollarReward {
+  color: var(--color-primary-dark);
+  font-weight: bolder;
+}
+
+.heroIconSpan {
+  background-color: #f5ba54;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+}
+.heroIcon {
+  color: #fff;
+  height: 48px;
+}
+
+.heroIconClipBoardSpan {
+  background-color: #f5ba54;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+}
+
+.heroIconClipBoard {
+  color: #fff;
+  height: 40px;
+}
+
+.formDiv {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .incentivesEligibility {
+    margin-left: 256px;
+    margin-right: 256px;
+  }
+}

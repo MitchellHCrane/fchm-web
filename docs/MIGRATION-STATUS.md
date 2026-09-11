@@ -46,16 +46,16 @@ subdomain until `"live"`). See `docs/EXTRACTION-REVIEW.md` for per-record caveat
 | toddRodocker | todd | 🟨 | blink app URL; gmail email |
 | tresabertlshofer | tresa | 🗑 retired | Netlify site **deleted**; record kept for restore (not built/routed) |
 
-## Tier 2 — microsites (Phase 4)
+## Tier 2 — microsites (Phase 4) — ✅ migrated, staging verification pending
 
-| Old repo | live subdomain(s) | Status |
-|---|---|---|
-| troyReferralSite | `referral.` (also `troy.`, `start.troywarner.com`) | ⬜ |
-| dpa-1stclass | `dpa.1stclasshomemortgage.com` | ⬜ |
+| Old repo | route | Status | Notes |
+|---|---|---|---|
+| troyReferralSite | `app/referral/` → `referral.1stclasshomemortgage.com` | 🟦 built | Canonical/OG/JSON-LD updated from the old repo's stale `troy.1stclasshomemortgage.com` to `referral.` (the actual live subdomain — `troy.` is reserved, see Tier 1). FAQ copy + FAQPage JSON-LD both read `@content/referral.ts` (single source, no more manual sync). `react-snap`/`puppeteer` dropped — static export covers it. GA4 tag not carried over (was a `G-XXXXXXXXXX` placeholder) — add the real ID to `@config/site.ts` `analytics.ga4MeasurementId` when known. |
+| dpa-1stclass | `app/dpa/` → `dpa.1stclasshomemortgage.com` | 🟦 built | JSX-in-data converted to serializable `Span[]` rich text (`@content/dpa.ts` + `@ui/dpa/RichText`). |
 
-## Tier 3 — company (Phase 5)
+## Tier 3 — company (Phase 5) — ✅ migrated, staging verification pending
 
-| Old repo | domain | Status |
-|---|---|---|
-| 1stclassnextjs | `1stclasshomemortgage.com` + `firstclasshomemortgage.com` | ⬜ |
-| 1stclasshomemortgage | retire (superseded by 1stclassnextjs) | ⬜ |
+| Old repo | route | Status | Notes |
+|---|---|---|---|
+| 1stclassnextjs | `app/company/[domain]/` → `1stclasshomemortgage.com` + `firstclasshomemortgage.com` | 🟦 built | Fixed the `next/head`-in-App-Router bug (was a no-op) with real `generateMetadata` + server-rendered JSON-LD. Replaced the four `NEXT_PUBLIC_*` env vars (couldn't vary per-domain in one deploy anyway) with a `host → CompanyTenant` lookup in `@content/company.ts`. `mortgage-calculator-react` replaced with the same in-house calculator ported verbatim from the source. ⚠ REVIEW: `NEXT_PUBLIC_NMLS_NUMBER` existed in the old `.env.*.example` files but was never read anywhere in the source; the footer's NMLS/license text is static ("Regulated by the **Colorado** Division of Real Estate NMLS #2719095" + "Company NMLS #1843") — confirm that's intentional, not a copy-paste leftover, and confirm the real phone number per domain (both currently default to Troy's own number, matching every code fallback). |
+| 1stclasshomemortgage | retire (superseded by 1stclassnextjs, now folded into `fchm-web`) | ⬜ | Check GSC / inbound links for deep paths that relied on its Netlify SPA redirect before decommissioning. |
