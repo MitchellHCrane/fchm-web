@@ -100,8 +100,12 @@
 
   .legacy-typography a { text-decoration: none; color: var(--color-primary); }
 
-  /* Shared CTA button (was .buttonBlue) */
-  .button-blue {
+  /* Shared CTA button (was .buttonBlue). Selector is `a.button-blue`, not
+     `.button-blue` — a bare class selector (0,1,0) loses to
+     `.legacy-typography a` (0,1,1) on specificity, so the CTA's white text
+     was losing to the legacy link color, which is the same blue as the
+     button's own background — rendering the text invisible. */
+  a.button-blue {
     width: 100%;
     margin: 32px auto 0;
     display: block;
@@ -121,12 +125,12 @@
     user-select: none;
     transition: 0.3s;
   }
-  .button-blue:hover {
+  a.button-blue:hover {
     box-shadow: 0 8px 16px rgba(145, 149, 157, 0.3);
     transform: translateY(-2px);
   }
   @media (min-width: 1024px) {
-    .button-blue {
+    a.button-blue {
       width: fit-content;
       margin: 32px 0 0;
       padding: 16px 32px;
