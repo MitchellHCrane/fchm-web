@@ -38,17 +38,29 @@ export function Profile({ officer }: { officer: Officer }) {
     </div>
   );
 
-  return (
-    <div
-      className={`${styles.profileDiv} ${hero ? styles.heroBg : ""} ${hero?.overlay ? styles.heroBgOverlay : ""}`}
-      style={hero ? ({ "--hero-bg": `url(${hero.src})` } as React.CSSProperties) : undefined}
-    >
+  const profileBox = (
+    <div className={styles.profileDiv}>
       {showParticles && (
         <div className={styles.particleBg}>
           <ParticleField />
         </div>
       )}
       {content}
+    </div>
+  );
+
+  // The hero image sits on a separate, full-width OUTER wrapper (matching the
+  // source's .profile-background), not on .profileDiv itself (max-width:
+  // 1024px) — otherwise the image is boxed into the centered content column
+  // instead of filling the section edge-to-edge.
+  if (!hero) return profileBox;
+
+  return (
+    <div
+      className={`${styles.heroBg} ${hero.overlay ? styles.heroBgOverlay : ""}`}
+      style={{ "--hero-bg": `url(${hero.src})` } as React.CSSProperties}
+    >
+      {profileBox}
     </div>
   );
 }
