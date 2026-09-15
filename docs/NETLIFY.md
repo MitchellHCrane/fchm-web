@@ -61,8 +61,70 @@ Known from the repos:
   addresses). **Done (Phase 5):** now a `host → CompanyTenant` lookup in
   `@content/company.ts` — no env vars needed on the new site.
 
-## DNS
+## DNS — resolved (2026-09-14)
 
-Decision pending (plan risk #3): move `1stclasshomemortgage.com` to Netlify DNS
-for a true wildcard cert + zero-touch officer onboarding, vs. per-subdomain CNAME
-+ domain alias. Inventory MX / SPF / DKIM / DMARC + existing subdomains first.
+`1stclasshomemortgage.com` is **already on Netlify DNS** (added Dec 10, 2021;
+29 records, all managed in the Netlify dashboard) — the "move to Netlify DNS"
+decision from Phase 0 is moot, it's already there. No registrar migration
+needed. Every record is Netlify's own `NETLIFY` type (a smart alias to a
+`*.netlify.app` site name), TTL 3600s.
+
+Captured from the live zone:
+
+| Subdomain | Currently points at (`*.netlify.app`) |
+|---|---|
+| `1stclasshomemortgage.com` (apex) | `1stclasshomemortgage` |
+| `www` | `1stclasshomemortgage` |
+| `alan` | `alancooper` |
+| `andrew` | `andrewadams` |
+| `bruce` | `bruceingram` |
+| `caleb` | `calebadams` |
+| `cassey` | `casseystanger` |
+| `deloy` | `deloygriffin` |
+| `dpa` | `dpa1stclass` |
+| `eric` | `ericpoulson` |
+| `erick` | `erickshank` |
+| `ginny` | `ginnybrimley` |
+| `james` | `jamesthompson` |
+| `jennifer` | `jennifer-moore` |
+| `kari` | **`1stclasshomemortgage`** ⚠ |
+| `kent` | `kentbarker` |
+| `linda` | `lindaskehan` |
+| `mortgagerebel` | `mortgagerebel` (site paused) |
+| `phil` | `philwillson` |
+| `raul` | `raullaveiru` |
+| `referral` | `troyrefferal` |
+| `russ` | `russ-warner` |
+| `sarah` | `musical-nasturtium-618981` (never renamed) |
+| `steve` | `stevejones` |
+| `steves` | `stevesummers` |
+| `tiffany` | `tiffanybartnicki` |
+| `todd` | `toddrodocker` |
+| `troy` | **`1stclasshomemortgage`** |
+| _(TXT)_ | `apple-domain-verification=...` — unrelated, leave alone |
+
+⚠ **`kari.1stclasshomemortgage.com` currently resolves to the *company* site**,
+not a Kari-specific one — looks like a stale/mistaken record on the *current*
+live setup (unrelated to this migration). Worth checking with Mitchell before
+cutover; fchm-web will fix it regardless once `kari`'s own record is live.
+
+`troy.1stclasshomemortgage.com` also resolves to the company site today —
+confirms `troy.` is not a distinct "referral" alias as earlier assumed, it's
+just another alias of the company homepage. Troy's officer-tier subdomain is
+still undecided (he can't use `troy.` — it's the company alias).
+
+`jourdancampbell` and `tresabertlshofer` have **no record in this zone at
+all** — confirms they're genuinely gone, nothing to migrate. `fchm-web`
+correctly has both as `status: "retired"`.
+
+`firstclasshomemortgage.com` is a **separate zone/domain**, not covered by
+the above — needs its own DNS export before cutover.
+
+### Cutover mechanics (per subdomain)
+
+Since these are Netlify `NETLIFY`-type records (not raw CNAMEs), repointing
+one means: add the subdomain as a custom domain on the **new** `fchm-web`
+Netlify site (Domain management → Add a domain), then remove it from the
+**old** individual site's domain settings (Netlify ties a custom domain to
+one site's TLS cert at a time). Do this one subdomain at a time per the
+migration-status rollout, not all at once.

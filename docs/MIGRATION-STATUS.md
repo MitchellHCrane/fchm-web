@@ -21,7 +21,7 @@ subdomain until `"live"`). See `docs/EXTRACTION-REVIEW.md` for per-record caveat
 |---|---|---|---|
 | troywarner | troy → *subdomain TBD* | 🟨 draft | pilot content fully migrated & verified; `troy.1stclasshomemortgage.com` confirmed reserved for the separate referral microsite (not this LO site) — pulled back to draft until a real subdomain is picked |
 | alanCooper | alan | 🟨 | `profileBackground: "plain"` |
-| andrewAdams | andrew | 🟨 | Realtor title, only corp NMLS found, template app link — confirmed intended |
+| andrewAdams | andrew | 🟦 live | Realtor referral partner (not a loan officer) — confirmed intended, cleared to launch as-is |
 | bruceIngramNew | bruce | 🟨 | blink app URL |
 | calebAdams | caleb | 🟨 | testimonials array intentionally empty — confirmed |
 | casseystanger | cassey | 🟨 | |
