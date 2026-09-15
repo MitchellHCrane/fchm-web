@@ -23,5 +23,5 @@ export default defineOfficer({
   profileBackground: "plain",
   heroBackground: { src: "/backgrounds/kari-hero.png" },
 
-  status: "draft",
+  status: "live",
 });

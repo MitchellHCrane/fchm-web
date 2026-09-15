@@ -22,5 +22,5 @@ export default defineOfficer({
   filedropUrl: "https://documentguardian.com/filedrop/linda@firstclasshomemortgage.com",
   reviewUrl: "https://g.page/r/Ca6GOecLexOkEAI/review",
 
-  status: "draft",
+  status: "live",
 });

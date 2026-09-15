@@ -21,5 +21,5 @@ export default defineOfficer({
 
   application: { kind: "blink", slug: "deloygriffin" },
 
-  status: "draft",
+  status: "live",
 });

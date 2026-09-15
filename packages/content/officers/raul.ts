@@ -21,5 +21,5 @@ export default defineOfficer({
   application: { kind: "my1003", nmls: "2223020" },
   calendlyUrl: "https://calendly.com/raul-mortgage/30min",
 
-  status: "draft",
+  status: "live",
 });

@@ -25,5 +25,5 @@ export default defineOfficer({
   heroBackground: { src: "/backgrounds/plain-hero.png" },
   sections: ["socialVerse","introVideo"],
 
-  status: "draft",
+  status: "live",
 });

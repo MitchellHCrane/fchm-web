@@ -22,5 +22,5 @@ export default defineOfficer({
   filedropUrl: "https://documentguardian.com/filedrop/erick@firstclasshomemortgage.com",
   reviewUrl: "https://www.zillow.com/lender-profile/erickshank/?utm_source=email&utm_medium=email&utm_campaign=emo-MortgageReviewPublishedNotifyLender-reply#reviews",
 
-  status: "draft",
+  status: "live",
 });

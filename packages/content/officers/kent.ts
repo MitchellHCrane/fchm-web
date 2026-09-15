@@ -21,5 +21,5 @@ export default defineOfficer({
   application: { kind: "my1003", nmls: "288828" },
   filedropUrl: "https://documentguardian.com/filedrop/kent@firstclasshomemortgage.com",
 
-  status: "draft",
+  status: "live",
 });

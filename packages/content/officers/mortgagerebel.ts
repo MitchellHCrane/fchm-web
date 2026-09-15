@@ -20,5 +20,5 @@ export default defineOfficer({
   application: { kind: "blink", slug: "themortgagerebel" },
   calendlyUrl: "https://calendly.com/kris-mortgage/30min",
 
-  status: "draft",
+  status: "live",
 });

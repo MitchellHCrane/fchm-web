@@ -23,5 +23,5 @@ export default defineOfficer({
   profileBackground: "plain",
   heroBackground: { src: "/backgrounds/flag.jpg", overlay: true },
 
-  status: "draft",
+  status: "live",
 });

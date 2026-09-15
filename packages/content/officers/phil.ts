@@ -22,5 +22,5 @@ export default defineOfficer({
   application: { kind: "blink", slug: "philwillson" },
   filedropUrl: "https://documentguardian.com/filedrop/phil@loanforce.net",
 
-  status: "draft",
+  status: "live",
 });

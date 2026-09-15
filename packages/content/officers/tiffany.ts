@@ -21,5 +21,5 @@ export default defineOfficer({
   application: { kind: "blink", slug: "tiffanybartnicki" },
   filedropUrl: "https://documentguardian.com/filedrop/tiffany@firstclasshomemortgage.com",
 
-  status: "draft",
+  status: "live",
 });

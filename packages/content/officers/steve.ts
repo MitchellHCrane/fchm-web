@@ -19,5 +19,5 @@ export default defineOfficer({
 
   application: { kind: "blink", slug: "stevejones" },
 
-  status: "draft",
+  status: "live",
 });

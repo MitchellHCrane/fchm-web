@@ -17,34 +17,40 @@ All records auto-extracted into `packages/content/officers/<slug>.ts` as
 `status: "draft"` (they build at `/sites/<slug>/` for preview but get no
 subdomain until `"live"`). See `docs/EXTRACTION-REVIEW.md` for per-record caveats.
 
-| Old repo | slug / live subdomain | Status | Notes |
-|---|---|---|---|
-| troywarner | troy → *subdomain TBD* | 🟨 draft | pilot content fully migrated & verified; `troy.1stclasshomemortgage.com` confirmed reserved for the separate referral microsite (not this LO site) — pulled back to draft until a real subdomain is picked |
-| alanCooper | alan | 🟨 | `profileBackground: "plain"` |
-| andrewAdams | andrew | 🟦 live | Realtor referral partner (not a loan officer) — confirmed intended, cleared to launch as-is |
-| bruceIngramNew | bruce | 🟨 | blink app URL |
-| calebAdams | caleb | 🟨 | testimonials array intentionally empty — confirmed |
-| casseystanger | cassey | 🟨 | |
-| deloyGriff2 (+ deloyGriffin) | deloy | 🟨 | both old repos → one site; deloyGriffin.ts removed; fax from deloyGriffin — confirmed intended |
-| ericPoulson | eric | 🟨 | plain bg; long bio truncated; socialVerse/introVideo ids left as placeholders — confirmed intended |
-| erickshank | erick | 🟨 | reviewUrl is a Zillow link — confirmed intended |
-| ginnybrimley | ginny | 🟨 | own fax |
-| jamesThomson | james | 🟨 | folder/remote/name disagree — content says "Thompson"; yahoo email |
-| jenniferMoore | jennifer | 🟨 | plain bg; long bio truncated; FB/IG/Calendly — confirmed intended |
-| jourdancampbell | jourdan | 🗑 retired | Netlify site **deleted**; record kept for restore (not built/routed) |
-| karifitzgerald | kari | 🟨 | plain bg; blink URL; own fax; utahlender.com email |
-| kentbarker | kent | 🟨 | own fax; .png headshot |
-| kris-matyas | mortgagerebel | 🟨 ⚠ | kept; Netlify site **paused** — un-pause at cutover; blink slug `themortgagerebel` |
-| lindaskehan | linda | 🟨 | own fax + review link; large headshot |
-| philWillson | phil | 🟨 | name "Phillip"; phone == fax; loanforce.net email — confirmed intended |
-| raulLaveiru | raul | 🟨 | my1003 URL had a 9-digit id; using NMLS 2223020 — confirmed intended |
-| russWarner | russ | 🟨 | gmail email |
-| sarahSpencer | sarah | 🟨 | gmail email; .png headshot |
-| steveJones | steve | 🟨 | blink app URL |
-| steveSummers | steves | 🟨 | FB/IG; large headshot |
-| tiffanyBartnicki | tiffany | 🟨 | blink app URL; own fax |
-| toddRodocker | todd | 🟨 | blink app URL; gmail email |
-| tresabertlshofer | tresa | 🗑 retired | Netlify site **deleted**; record kept for restore (not built/routed) |
+All 23 records below flipped `live` on 2026-09-15 (already confirmed intended
+in the Sep 4 content review — see `docs/EXTRACTION-REVIEW.md`). "Cutover"
+tracks the Netlify domain move itself (add to `fchm` → remove from the old
+site), which is a separate, manual, one-subdomain-at-a-time step — see
+`docs/NETLIFY.md` for the exact list and old-site names.
+
+| Old repo | slug / live subdomain | Repo status | Cutover | Notes |
+|---|---|---|---|---|
+| troywarner | troy → *subdomain TBD* | 🟨 draft | — | pilot content fully migrated & verified; `troy.1stclasshomemortgage.com` confirmed reserved for the company-site alias (not this LO site) — stays draft until a real subdomain is picked |
+| alanCooper | alan | 🟦 live | ⬜ | `profileBackground: "plain"` + flag hero image |
+| andrewAdams | andrew | 🟦 live | ✅ cut over 2026-09-14 | Realtor referral partner (not a loan officer) — confirmed intended |
+| bruceIngramNew | bruce | 🟦 live | ⬜ | blink app URL |
+| calebAdams | caleb | 🟦 live | ⬜ | testimonials array intentionally empty — confirmed |
+| casseystanger | cassey | 🟦 live | ⬜ | |
+| deloyGriff2 (+ deloyGriffin) | deloy | 🟦 live | ⬜ | both old repos → one site; deloyGriffin.ts removed; fax from deloyGriffin — confirmed intended |
+| ericPoulson | eric | 🟦 live | ⬜ | plain bg; long bio truncated; socialVerse/introVideo ids left as placeholders — confirmed intended |
+| erickshank | erick | 🟦 live | ⬜ | reviewUrl is a Zillow link — confirmed intended |
+| ginnybrimley | ginny | 🟦 live | ⬜ | own fax |
+| jamesThomson | james | 🟦 live | ⬜ | folder/remote/name disagree — content says "Thompson"; yahoo email |
+| jenniferMoore | jennifer | 🟦 live | ⬜ | plain bg; long bio truncated; FB/IG/Calendly — confirmed intended |
+| jourdancampbell | jourdan | 🗑 retired | — | Netlify site **deleted**; record kept for restore (not built/routed) |
+| karifitzgerald | kari | 🟦 live | ⬜ | plain bg; blink URL; own fax; utahlender.com email |
+| kentbarker | kent | 🟦 live | ⬜ | own fax; .png headshot |
+| kris-matyas | mortgagerebel | 🟦 live | ⬜ ⚠ | old Netlify site is **paused** — un-pause it as part of cutover; blink slug `themortgagerebel` |
+| lindaskehan | linda | 🟦 live | ⬜ | own fax + review link; large headshot |
+| philWillson | phil | 🟦 live | ⬜ | name "Phillip"; phone == fax; loanforce.net email — confirmed intended |
+| raulLaveiru | raul | 🟦 live | ⬜ | my1003 URL had a 9-digit id; using NMLS 2223020 — confirmed intended |
+| russWarner | russ | 🟦 live | ⬜ | gmail email |
+| sarahSpencer | sarah | 🟦 live | ⬜ | gmail email; .png headshot |
+| steveJones | steve | 🟦 live | ⬜ | blink app URL |
+| steveSummers | steves | 🟦 live | ⬜ | FB/IG; large headshot |
+| tiffanyBartnicki | tiffany | 🟦 live | ⬜ | blink app URL; own fax |
+| toddRodocker | todd | 🟦 live | ⬜ | blink app URL; gmail email |
+| tresabertlshofer | tresa | 🗑 retired | — | Netlify site **deleted**; record kept for restore (not built/routed) |
 
 ## Tier 2 — microsites (Phase 4) — ✅ migrated, staging verification pending
 

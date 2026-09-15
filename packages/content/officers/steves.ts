@@ -20,5 +20,5 @@ export default defineOfficer({
   application: { kind: "my1003", nmls: "342400" },
   social: { facebook: "https://www.facebook.com/SteveSummersMortgage/", instagram: "https://www.instagram.com/stevesummersmortgage/" },
 
-  status: "draft",
+  status: "live",
 });

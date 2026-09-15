@@ -22,5 +22,5 @@ export default defineOfficer({
   reviewUrl: "https://g.page/r/CZ8c3m9WJ-CpEBM/review",
   sections: ["testimonials"],
 
-  status: "draft",
+  status: "live",
 });

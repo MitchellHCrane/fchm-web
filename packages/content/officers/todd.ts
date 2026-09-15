@@ -20,5 +20,5 @@ export default defineOfficer({
   application: { kind: "blink", slug: "toddrodocker" },
   filedropUrl: "https://documentguardian.com/filedrop/toddrodocker@gmail.com",
 
-  status: "draft",
+  status: "live",
 });

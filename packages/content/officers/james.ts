@@ -19,5 +19,5 @@ export default defineOfficer({
 
   application: { kind: "my1003", nmls: "298103" },
 
-  status: "draft",
+  status: "live",
 });
