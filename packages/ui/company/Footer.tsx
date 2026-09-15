@@ -41,6 +41,7 @@ export function Footer({ phone, address }: { phone: string; address: PostalAddre
     { name: "Down Payment Assistance", href: companyContent.dpaUrl },
     { name: "Careers", href: "/careers" },
     { name: "Privacy Policy", href: "/privacy-policy" },
+    { name: "Terms & Conditions", href: "/terms" },
   ];
 
   return (
