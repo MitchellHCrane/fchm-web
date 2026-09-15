@@ -66,7 +66,13 @@
     display: grid;
     gap: 8%;
     align-items: start;
-    grid-template-columns: auto auto;
+    /* Fixed-ish picture column instead of the source's "auto auto" — with a
+       plain <img width:100%>, an "auto" grid track sizes to the image's
+       NATIVE pixel dimensions, so headshot display size varied wildly by
+       source file resolution (e.g. andrew's 673x462 vs kari's 1786x2048)
+       instead of by design. This makes every headshot the same size
+       regardless of the source photo's resolution. */
+    grid-template-columns: minmax(260px, 360px) 1fr;
     grid-template-rows: auto;
     background: transparent;
   }

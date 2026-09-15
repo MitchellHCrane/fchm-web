@@ -23,8 +23,8 @@ export default defineOfficer({
   headshot: {
     src: "/headshots/troy.jpg",
     alt: "Troy Warner, Mortgage Banker",
-    width: 800,
-    height: 800,
+    width: 400,
+    height: 408,
   },
   bio: "Hello! I'm Troy, I look forward to helping you along your home buying experience. I've provided a few useful links to get you started.",
 
