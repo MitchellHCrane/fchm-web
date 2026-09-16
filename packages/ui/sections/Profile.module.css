@@ -6,6 +6,7 @@
   align-items: center;
   margin: 0 8%;
   padding: 64px 0;
+  position: relative;
 }
 
 .particleBg {
@@ -61,11 +62,23 @@
   }
   .particleBg {
     display: block;
+    /* Was a flex sibling of .profileGrid with no intrinsic size (its only
+       content is an absolutely-positioned canvas), so it collapsed to ~0
+       width and competed with .profileGrid for flex space instead of
+       covering the section — independent of the placeholder's low opacity,
+       this alone would have made any background here invisible. Taking it
+       out of flow and overlaying the whole hero section instead. */
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
   }
   .profileGrid {
     display: grid;
     gap: 8%;
     align-items: start;
+    position: relative;
+    z-index: 1;
     /* Fixed-ish picture column instead of the source's "auto auto" — with a
        plain <img width:100%>, an "auto" grid track sizes to the image's
        NATIVE pixel dimensions, so headshot display size varied wildly by
