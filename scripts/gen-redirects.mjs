@@ -68,6 +68,18 @@ for (const o of officers) {
     continue;
   }
 
+  // Retired officers: no site to serve, but if the subdomain is still (or
+  // ever becomes) DNS-live, send visitors/crawlers to the homepage instead
+  // of leaving them to 404.
+  if (o.status === "retired") {
+    lines.push(
+      `# ${o.name} (retired -> home)`,
+      `${host}/*  https://${DOMAIN}/  301!`,
+      "",
+    );
+    continue;
+  }
+
   // Only `live` officers get a public subdomain. Drafts still build at
   // /sites/<slug>/ for preview but aren't routed.
   if (o.status !== "live") continue;
