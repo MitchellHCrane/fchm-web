@@ -32,7 +32,7 @@ export default async function PrivacyPolicyPage({ params }: { params: Params }) 
         Back
       </Link>
       <h1 className="text-3xl font-bold mb-4 mt-2">Privacy Notice Policy</h1>
-      <p className="mb-4">Revision Date: 10/16/2023</p>
+      <p className="mb-4">Revision Date: 09/14/2026</p>
 
       <h2 className="text-xl font-bold mb-2">1. Overview</h2>
       <p className="mb-4">
