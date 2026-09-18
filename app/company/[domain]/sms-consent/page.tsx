@@ -41,6 +41,17 @@ export default async function SmsConsentPage({ params }: { params: Params }) {
           any time by replying STOP.
         </p>
         <SmsConsentForm />
+        <p className="mt-4 text-sm text-gray-600">
+          By opting in, you agree to our{" "}
+          <Link href="/terms" className="underline">
+            Terms &amp; Conditions
+          </Link>{" "}
+          and{" "}
+          <Link href="/privacy-policy" className="underline">
+            Privacy Policy
+          </Link>
+          . Message and data rates may apply. Reply STOP to opt out at any time.
+        </p>
       </div>
     </div>
   );
