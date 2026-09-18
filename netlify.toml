@@ -5,6 +5,9 @@
   command = "pnpm build"     # `prebuild` runs scripts/gen-redirects.mjs
   publish = "out"            # next.config.mjs -> output: "export"
 
+[functions]
+  directory = "netlify/functions"
+
 [build.environment]
   NODE_VERSION = "22"
   NPM_FLAGS = "--version"    # let pnpm (packageManager field) drive install

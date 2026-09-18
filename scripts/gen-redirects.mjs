@@ -53,6 +53,11 @@ const lines = [
   "/referral/*     /referral/:splat     200!",
   "/docs/*         /docs/:splat         200!",
   "",
+  "# The sms-consent form (company site) needs a live backend, which a static",
+  "# export can't provide — this proxies to the Netlify Function instead.",
+  "# Same top-of-file placement as the static assets above, for the same reason.",
+  "/api/sms-consent  /.netlify/functions/sms-consent  200!",
+  "",
 ];
 
 let live = 0;

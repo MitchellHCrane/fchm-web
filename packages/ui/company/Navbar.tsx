@@ -143,6 +143,9 @@ export function Navbar({ phone }: { phone: string }) {
                 <Link href="/testimonials" className="-mx-3 block rounded-lg px-3 py-2 hover:bg-gray-50">
                   Testimonials
                 </Link>
+                <Link href="/sms-consent" className="-mx-3 block rounded-lg px-3 py-2 hover:bg-gray-50">
+                  Text Updates Sign Up
+                </Link>
                 <Link href="/privacy-policy" className="-mx-3 block rounded-lg px-3 py-2 hover:bg-gray-50">
                   Privacy Policy
                 </Link>

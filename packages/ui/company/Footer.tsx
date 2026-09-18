@@ -40,6 +40,7 @@ export function Footer({ phone, address }: { phone: string; address: PostalAddre
     { name: "Loan Application", href: companyContent.applicationUrl },
     { name: "Down Payment Assistance", href: companyContent.dpaUrl },
     { name: "Careers", href: "/careers" },
+    { name: "Text Updates Sign Up", href: "/sms-consent" },
     { name: "Privacy Policy", href: "/privacy-policy" },
     { name: "Terms & Conditions", href: "/terms" },
   ];
