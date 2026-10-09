@@ -17,7 +17,7 @@ export default defineOfficer({
   },
   bio: "Hello! I'm Steve, I look forward to helping you along your home buying experience. I've provided a few useful links to get you started.",
 
-  application: { kind: "blink", slug: "stevejones" },
+  application: { kind: "my1003", nmls: "292252" },
 
   status: "live",
 });
