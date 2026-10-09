@@ -18,7 +18,6 @@ export default defineOfficer({
   bio: "Hello! I'm Steve, I look forward to helping you along your home buying experience. I've provided a few useful links to get you started.",
 
   application: { kind: "my1003", nmls: "292252" },
-  filedropUrl: "https://1stclasshomemortgage.my1003app.com/292252/register",
 
   status: "live",
 });
