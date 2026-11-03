@@ -3,6 +3,7 @@ import { officerSchema, type Officer } from "@content/schema";
 // One import per officer. `pnpm new:officer` appends here automatically.
 // The `slug` in each file is the LIVE subdomain label — do not change it
 // without a redirect (see packages/content/subdomains.txt).
+import dallin from "./dallin";
 import alan from "./alan";
 import andrew from "./andrew";
 import bruce from "./bruce";
@@ -30,7 +31,35 @@ import todd from "./todd";
 import tresa from "./tresa";
 import troy from "./troy";
 
-const RAW = [alan, andrew, bruce, caleb, cassey, deloy, eric, erick, ginny, james, jennifer, jourdan, kari, kent, linda, mortgagerebel, phil, raul, russ, sarah, steve, steves, tiffany, todd, tresa, troy];
+const RAW = [
+  dallin,
+  alan,
+  andrew,
+  bruce,
+  caleb,
+  cassey,
+  deloy,
+  eric,
+  erick,
+  ginny,
+  james,
+  jennifer,
+  jourdan,
+  kari,
+  kent,
+  linda,
+  mortgagerebel,
+  phil,
+  raul,
+  russ,
+  sarah,
+  steve,
+  steves,
+  tiffany,
+  todd,
+  tresa,
+  troy,
+];
 
 /** Validated, defaults-applied officer records, keyed by slug. */
 export const officers: Officer[] = RAW.map((raw, i) => {

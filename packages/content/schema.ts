@@ -101,7 +101,8 @@ export const DEFAULT_RESOURCE_CARDS: ResourceCardId[] = [
 
 const applicationSchema = z.discriminatedUnion("kind", [
   // firstclasshomemortgage.my1003app.com/<nmls>/register
-  z.object({ kind: z.literal("my1003"), nmls: z.string() }),
+  // `spanish: true` adds a secondary "aplicar en español" link to the card.
+  z.object({ kind: z.literal("my1003"), nmls: z.string(), spanish: z.boolean().optional() }),
   // blink.mortgage/app/signup/p/FirstClassHomeMortgage/<slug>
   z.object({ kind: z.literal("blink"), slug: z.string() }),
   z.object({ kind: z.literal("custom"), href: z.string().url() }),

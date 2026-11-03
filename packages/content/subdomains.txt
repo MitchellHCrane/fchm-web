@@ -8,6 +8,7 @@
 #
 # Captured from the Netlify site list on 2026-09-02.
 
+dallin        dallin.1stclasshomemortgage.com         live
 alan          alan.1stclasshomemortgage.com           live
 andrew        andrew.1stclasshomemortgage.com         live
 bruce         bruce.1stclasshomemortgage.com          live

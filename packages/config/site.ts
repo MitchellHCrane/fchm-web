@@ -83,6 +83,14 @@ export function applicationHref(
   }
 }
 
+/** Spanish-language variant of the my1003 registration link. my1003's own
+ *  language toggle also appends a `time=` param, but that's just a
+ *  client-side cache-buster from their site — not required for the link
+ *  to load in Spanish. */
+export function applicationHrefEs(app: { kind: "my1003"; nmls: string }): string {
+  return `${applicationHref(app)}?POSAppLanguage=ES`;
+}
+
 export function filedropHref(email: string): string {
   return `https://documentguardian.com/filedrop/${email}`;
 }

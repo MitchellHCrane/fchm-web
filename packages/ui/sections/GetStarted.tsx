@@ -1,6 +1,6 @@
 import type { Officer, ResourceCardId } from "@content/schema";
 import { DEFAULT_RESOURCE_CARDS } from "@content/schema";
-import { shared, applicationHref, filedropHref } from "@config/site";
+import { shared, applicationHref, applicationHrefEs, filedropHref } from "@config/site";
 import { GetStartedItem, type GetStartedItemProps } from "./GetStartedItem";
 import styles from "./GetStarted.module.css";
 
@@ -33,7 +33,14 @@ function buildCards(officer: Officer): GetStartedItemProps[] {
 
   for (const id of wanted) {
     switch (id) {
-      case "application":
+      case "application": {
+        const spanish =
+          officer.application.kind === "my1003" && officer.application.spanish
+            ? {
+                secondaryUrl: applicationHrefEs(officer.application),
+                secondaryText: "Aplicar en español",
+              }
+            : {};
         out.push({
           title: "Loan Application",
           description:
@@ -41,8 +48,10 @@ function buildCards(officer: Officer): GetStartedItemProps[] {
           url: applicationHref(officer.application),
           icon: "application",
           btnText: "Start Application",
+          ...spanish,
         });
         break;
+      }
       case "creditSmart":
         out.push({
           title: "CreditSmart Loan Education",

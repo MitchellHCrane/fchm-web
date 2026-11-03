@@ -17,6 +17,9 @@ export interface GetStartedItemProps {
   url: string;
   icon: ResourceCardId;
   btnText: string;
+  /** Optional secondary link rendered below the main button (e.g. a Spanish-language variant). */
+  secondaryUrl?: string;
+  secondaryText?: string;
 }
 
 /** Ported from troywarner/src/Components/GetStartedItem.js */
@@ -26,6 +29,8 @@ export function GetStartedItem({
   url,
   icon,
   btnText,
+  secondaryUrl,
+  secondaryText,
 }: GetStartedItemProps) {
   return (
     <div className={styles.gridItem}>
@@ -47,6 +52,18 @@ export function GetStartedItem({
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/icons/arrow-right.svg" alt="" aria-hidden />
       </a>
+      {secondaryUrl && secondaryText && (
+        <a
+          href={secondaryUrl}
+          target="_blank"
+          rel="noreferrer"
+          className={`${styles.cardLink} ${styles.secondaryLink}`}
+        >
+          {secondaryText}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/icons/arrow-right.svg" alt="" aria-hidden />
+        </a>
+      )}
     </div>
   );
 }

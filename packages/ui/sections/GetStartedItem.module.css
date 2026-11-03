@@ -49,6 +49,10 @@
   width: auto;
 }
 
+.secondaryLink {
+  margin-top: 8px;
+}
+
 @media (min-width: 768px) {
   .gridItem {
     display: flex;
