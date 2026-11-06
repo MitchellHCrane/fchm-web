@@ -7,9 +7,9 @@ import styles from "./LiteYouTube.module.css";
  * Click-to-load YouTube facade, ported from troyReferralSite/src/Components/LiteYouTube.js.
  * Shows only the poster image until clicked, so the YouTube player never loads on first paint.
  */
-export function LiteYouTube({ id, title }: { id: string; title: string }) {
+export function LiteYouTube({ id, title, poster: posterOverride }: { id: string; title: string; poster?: string }) {
   const [activated, setActivated] = useState(false);
-  const poster = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+  const poster = posterOverride ?? `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
   const src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
 
   return (

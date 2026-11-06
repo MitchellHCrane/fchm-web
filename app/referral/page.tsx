@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Header } from "@ui/sections/Header";
 import { Profile } from "@ui/referral/Profile";
+import { PresidentsClub } from "@ui/referral/PresidentsClub";
+import { WhyJoin } from "@ui/referral/WhyJoin";
+import { StickyCta } from "@ui/referral/StickyCta";
 import { HowItWorks } from "@ui/referral/HowItWorks";
 import { GetStarted } from "@ui/referral/GetStarted";
 import { Faq } from "@ui/referral/Faq";
@@ -40,10 +43,13 @@ export default function ReferralPage() {
       />
       <Header />
       <Profile />
+      <PresidentsClub />
+      <WhyJoin />
       <HowItWorks />
       <GetStarted />
       <Faq />
       <Footer />
+      <StickyCta />
     </div>
   );
 }

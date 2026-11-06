@@ -4,20 +4,33 @@ import styles from "./Profile.module.css";
 
 /** Ported from troyReferralSite/src/Components/Profile.js */
 export function Profile() {
+  const { hero } = referral;
   return (
     <div className={styles.profileDiv}>
       <div className={styles.profileGrid}>
         <div className={styles.columnPic} />
         <div className={styles.centerDiv}>
-          <h1 className={styles.profileName}>{referral.hero.heading}</h1>
-          <p className={styles.profileTagline}>{referral.hero.tagline}</p>
-          <p className={styles.profileP}>{referral.hero.body}</p>
-          <LiteYouTube id={referral.hero.video.id} title={referral.hero.video.title} />
+          <h1 className={styles.profileName}>{hero.heading}</h1>
+          <p className={styles.profileTagline}>{hero.tagline}</p>
+
+          <dl className={styles.stats}>
+            {hero.stats.map((s) => (
+              <div key={s.label} className={styles.stat}>
+                <dt className={styles.statLabel}>{s.label}</dt>
+                <dd className={styles.statValue}>{s.value}</dd>
+              </div>
+            ))}
+          </dl>
+
+          <LiteYouTube id={hero.video.id} title={hero.video.title} poster={hero.video.poster} />
           <div className={styles.buttonBlueDiv}>
-            <a href="#getStarted" className="button-blue">
-              Learn More
+            <a href={referral.formUrl} target="_blank" rel="noreferrer" className="button-blue">
+              Refer a Loan Officer
             </a>
           </div>
+          <p className={styles.secondaryLink}>
+            <a href="#getStarted">See program details</a>
+          </p>
         </div>
       </div>
     </div>

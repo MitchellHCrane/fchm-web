@@ -34,8 +34,15 @@ export const referral = {
     tagline:
       "We're hiring originators in California, Colorado, Idaho, New Mexico, Texas, Utah & Florida. Refer a licensed loan officer to First Class Home Mortgage and earn up to $695 per hire.",
     body: "The Partner/Recruiting Referral Program is a great way you can make extra cash!",
+    stats: [
+      { value: "$695", label: "per loan officer hired" },
+      { value: "$25", label: "to Realtors when your referral interviews" },
+      { value: "10", label: "paid referrals per month" },
+    ],
     video: {
       id: "dmEV-6MeL7Y",
+      // Trip photo instead of YouTube's stock thumbnail.
+      poster: "/referral/presidents-club/conference-1600.webp",
       title:
         "Troy Warner explains the First Class Home Mortgage loan officer referral program",
     },
@@ -43,7 +50,57 @@ export const referral = {
 
   formUrl: "https://fs10.formsite.com/twarner69/kdbphjilaj/index",
 
-  who: "First Class Home Mortgage is a mid-size mortgage company that is actively looking to grow our business in these 7 States; California, Colorado, Idaho, New Mexico, Texas, Utah & Florida. NMLS #1843 - Since 2006, we have helped 1,000's of families realize the joy of homeownership. We support our loan officers with amazing technology, the best programs & social media marketing & advertising.",
+  who: "A mid-size mortgage company actively growing in California, Colorado, Idaho, New Mexico, Texas, Utah & Florida. NMLS #1843.",
+  whoStats: [
+    { value: "2006", label: "Helping families since" },
+    { value: "7", label: "States we're hiring in" },
+    { value: "1,000s", label: "Families helped into homes" },
+  ],
+
+  // What the referred loan officer gets — the pitch the referrer passes on.
+  // Every item restates something already in this file (comp plan, 401(k),
+  // tech/marketing support, President's Club); don't add unverified perks.
+  whyJoin: {
+    heading: "Why your referral will say yes",
+    intro: "You're not just sending a name. You're doing a loan officer a favor.",
+    items: [
+      { icon: "comp", title: "Up to 2% comp", body: "Max comp plan of 2% lender-paid per closed loan." },
+      { icon: "trip", title: "President's Club trips", body: "Our top loan officers earn a yearly trip to an exotic beach resort." },
+      { icon: "tech", title: "Technology that works", body: "Modern tools and the best loan programs to close more deals." },
+      { icon: "marketing", title: "Marketing support", body: "Social media marketing and advertising to help them grow." },
+      { icon: "retirement", title: "401(k)", body: "Offered to tenured employees." },
+      { icon: "stable", title: "Established since 2006", body: "A licensed lender (NMLS #1843) that's helped thousands of families buy homes." },
+    ],
+  } as const,
+
+  share: {
+    heading: "Know a loan officer who'd love Cancun?",
+    message:
+      "Thought of you — First Class Home Mortgage is hiring loan officers (up to 2% comp + yearly President's Club trips). Check it out:",
+  },
+
+  presidentsClub: {
+    eyebrow: "President's Club",
+    heading: "Every year, our top loan officers go somewhere amazing",
+    body: "Each year CEO Troy Warner takes 10–16 of our top loan officers on a President's Club trip to an exotic beach resort. It's one of the biggest reasons loan officers join First Class Home Mortgage, and one more reason the loan officer you refer will want to say yes.",
+    destinations: [
+      "Costa Rica",
+      "Cancun",
+      "Dominican Republic",
+      "Puerto Vallarta",
+      "Caribbean cruises",
+    ],
+    // Files in public/referral/presidents-club/<slug>-{800,1600}.webp
+    // (web-optimized, metadata stripped). w/h = the 1600 version's size.
+    photos: [
+      { slug: "cancun", w: 1600, h: 1584, alt: "First Class Home Mortgage loan officers at a beach resort in Cancun" },
+      { slug: "costa-rica", w: 1363, h: 1600, alt: "President's Club group in front of a purple star monument in Costa Rica" },
+      { slug: "cruise", w: 1600, h: 1280, alt: "Loan officers at dinner aboard Royal Caribbean's Independence of the Seas" },
+      { slug: "team-group", w: 1600, h: 887, alt: "President's Club loan officers together on a company trip" },
+      { slug: "team-dinner", w: 1600, h: 900, alt: "Loan officers celebrating at a President's Club dinner" },
+      { slug: "night-out", w: 900, h: 1600, alt: "First Class Home Mortgage loan officers on a night out during a company trip" },
+    ],
+  },
 
   howItWorks: [
     {
@@ -59,25 +116,25 @@ export const referral = {
     {
       step: "payout",
       title: "3. You get paid",
-      body: "When your referral is hired, stays on, and closes a loan with us, you earn $695 — up to 10 per month ($7,200).",
+      body: "When your referral is hired, stays on, and closes a loan with us, you earn $695. Up to 10 per month: that's $6,950, or $7,200 for Realtors who also earn the $25 interview rewards.",
     },
   ] as const,
 
   incentives: [
     "$25 reward to any Realtor who participates in referring a loan officer. The Loan Officer you submit must interview with our company.",
-    "$695 for any referral submitted who is hired by the company & remains in their position & closes one loan with First Class Home Mortgage. (Max is 10 per month or $7,200)",
+    "$695 for any referral submitted who is hired by the company & remains in their position & closes one loan with First Class Home Mortgage. (Max is 10 per month: $6,950, or $7,200 including the $25 interview rewards.)",
   ],
   eligibility:
     "Currently licensed active Loan Officer's that have an NMLS Number",
   rules: [
     "If two or more people refer the same candidate, only the first referrer will receive the reward.",
-    "The max cap on the number of referrals a Realtor can make is 10 per month. Loan Officers has a max comp plan of 2% lender paid per closed loan. 401-K is offered to tenure employees.",
+    "The max cap on the number of referrals a Realtor can make is 10 per month.",
   ],
 
   faq: [
     {
       q: "How much do I earn for referring a loan officer?",
-      a: "Realtors earn $25 for any referral who interviews with First Class Home Mortgage. You earn $695 for a referral who is hired, stays in their position, and closes at least one loan with us. The maximum is 10 referrals per month, or $7,200.",
+      a: "Realtors earn $25 for any referral who interviews with First Class Home Mortgage. You earn $695 for a referral who is hired, stays in their position, and closes at least one loan with us. The maximum is 10 referrals per month: $6,950 in hire rewards, or $7,200 with the $25 interview rewards included.",
     },
     {
       q: "Who is eligible to be referred?",
@@ -93,7 +150,7 @@ export const referral = {
     },
     {
       q: "Is there a cap on how many referrals I can make?",
-      a: "Yes. A Realtor can make up to 10 referrals per month, for a maximum of $7,200.",
+      a: "Yes. A Realtor can make up to 10 referrals per month, for a maximum of $7,200 ($6,950 in hire rewards plus $250 in interview rewards).",
     },
     {
       q: "What is the loan officer compensation plan?",

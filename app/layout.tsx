@@ -12,6 +12,16 @@ export const metadata: Metadata = {
   },
   description:
     "First Class Home Mortgage — nationwide mortgage lending. Regulated by State of Utah Division of Real Estate NMLS #1843.",
+  // Served from /brand/, which every host passes through unrewritten (see
+  // scripts/gen-redirects.mjs). Root-relative /favicon.ico would be rewritten
+  // into the per-host tree (/sites/<slug>/favicon.ico) and 404.
+  icons: {
+    icon: [
+      { url: "/brand/favicon.ico", sizes: "any" },
+      { url: "/brand/icon-192.png", type: "image/png", sizes: "192x192" },
+    ],
+    apple: { url: "/brand/apple-touch-icon.png", sizes: "180x180" },
+  },
 };
 
 export default function RootLayout({
