@@ -1,21 +1,21 @@
 import {
-  BanknotesIcon,
+  AcademicCapIcon,
+  AdjustmentsHorizontalIcon,
   ComputerDesktopIcon,
   CurrencyDollarIcon,
-  MegaphoneIcon,
-  ShieldCheckIcon,
   SunIcon,
+  UserGroupIcon,
 } from "@heroicons/react/24/outline";
 import { referral } from "@content/referral";
 import styles from "./WhyJoin.module.css";
 
 const ICONS = {
+  options: AdjustmentsHorizontalIcon,
+  support: UserGroupIcon,
+  tech: ComputerDesktopIcon,
+  growth: AcademicCapIcon,
   comp: CurrencyDollarIcon,
   trip: SunIcon,
-  tech: ComputerDesktopIcon,
-  marketing: MegaphoneIcon,
-  retirement: BanknotesIcon,
-  stable: ShieldCheckIcon,
 } as const;
 
 /** What the referred loan officer gets: the pitch a referrer passes along. */

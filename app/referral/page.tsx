@@ -3,6 +3,7 @@ import { Header } from "@ui/sections/Header";
 import { Profile } from "@ui/referral/Profile";
 import { PresidentsClub } from "@ui/referral/PresidentsClub";
 import { WhyJoin } from "@ui/referral/WhyJoin";
+import { LoanOfficers } from "@ui/referral/LoanOfficers";
 import { StickyCta } from "@ui/referral/StickyCta";
 import { HowItWorks } from "@ui/referral/HowItWorks";
 import { GetStarted } from "@ui/referral/GetStarted";
@@ -45,6 +46,7 @@ export default function ReferralPage() {
       <Profile />
       <PresidentsClub />
       <WhyJoin />
+      <LoanOfficers />
       <HowItWorks />
       <GetStarted />
       <Faq />

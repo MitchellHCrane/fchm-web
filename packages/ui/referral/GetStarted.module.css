@@ -134,3 +134,20 @@
   display: flex;
   justify-content: center;
 }
+
+.getStartedBackground .mission {
+  max-width: 640px;
+  margin: 24px auto 0;
+  color: #fff;
+  font-style: italic;
+}
+.missionLabel {
+  display: block;
+  margin-bottom: 4px;
+  color: #f5ba54;
+  font-style: normal;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}

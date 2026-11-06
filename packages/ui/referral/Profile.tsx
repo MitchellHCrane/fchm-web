@@ -30,6 +30,8 @@ export function Profile() {
           </div>
           <p className={styles.secondaryLink}>
             <a href="#getStarted">See program details</a>
+            <span className={styles.linkSep} aria-hidden="true">·</span>
+            <a href="#loan-officers">Are you a loan officer? Let&apos;s talk</a>
           </p>
         </div>
       </div>

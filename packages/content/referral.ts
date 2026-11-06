@@ -13,6 +13,7 @@ export const referral = {
 
   ceo: {
     name: "Troy Warner",
+    title: "President & CEO",
     nmls: "102983",
     phone: "(801) 597-8832",
     tel: "+18015978832",
@@ -33,7 +34,6 @@ export const referral = {
     heading: "Loan Officer Referral Program",
     tagline:
       "We're hiring originators in California, Colorado, Idaho, New Mexico, Texas, Utah & Florida. Refer a licensed loan officer to First Class Home Mortgage and earn up to $695 per hire.",
-    body: "The Partner/Recruiting Referral Program is a great way you can make extra cash!",
     stats: [
       { value: "$695", label: "per loan officer hired" },
       { value: "$25", label: "to Realtors when your referral interviews" },
@@ -50,7 +50,9 @@ export const referral = {
 
   formUrl: "https://fs10.formsite.com/twarner69/kdbphjilaj/index",
 
-  who: "A mid-size mortgage company actively growing in California, Colorado, Idaho, New Mexico, Texas, Utah & Florida. NMLS #1843.",
+  who: "An independent mortgage brokerage working with multiple wholesale lenders, actively growing in California, Colorado, Idaho, New Mexico, Texas, Utah & Florida. NMLS #1843.",
+  mission:
+    "Serving clients and partners with dependability, integrity, and knowledge through caring communication.",
   whoStats: [
     { value: "2006", label: "Helping families since" },
     { value: "7", label: "States we're hiring in" },
@@ -58,20 +60,39 @@ export const referral = {
   ],
 
   // What the referred loan officer gets — the pitch the referrer passes on.
-  // Every item restates something already in this file (comp plan, 401(k),
-  // tech/marketing support, President's Club); don't add unverified perks.
+  // Sourced from the "Recruiting 2027" flyer plus the existing comp/401(k)
+  // and President's Club facts; don't add unverified perks.
   whyJoin: {
     heading: "Why your referral will say yes",
     intro: "You're not just sending a name. You're doing a loan officer a favor.",
     items: [
-      { icon: "comp", title: "Up to 2% comp", body: "Max comp plan of 2% lender-paid per closed loan." },
+      { icon: "options", title: "More options for their borrowers", body: "As an independent brokerage working with multiple wholesale lenders, they can find products and pricing that fit each client, from first-time buyers to self-employed borrowers and investors." },
+      { icon: "support", title: "Support that moves them forward", body: "Accessible leadership, experienced processing support, and a team willing to work through challenging scenarios together." },
+      { icon: "tech", title: "Technology that supports relationships", body: "CRM tools, automation, and responsible AI that strengthen follow-up, simplify routine work, and free up time for clients and referral partners." },
+      { icon: "growth", title: "Keep learning, keep growing", body: "Hands-on leadership, team collaboration, and ongoing training, with a path toward a future leadership role." },
+      { icon: "comp", title: "Up to 2% comp + 401(k)", body: "Max comp plan of 2% lender-paid per closed loan. 401(k) offered to tenured employees." },
       { icon: "trip", title: "President's Club trips", body: "Our top loan officers earn a yearly trip to an exotic beach resort." },
-      { icon: "tech", title: "Technology that works", body: "Modern tools and the best loan programs to close more deals." },
-      { icon: "marketing", title: "Marketing support", body: "Social media marketing and advertising to help them grow." },
-      { icon: "retirement", title: "401(k)", body: "Offered to tenured employees." },
-      { icon: "stable", title: "Established since 2006", body: "A licensed lender (NMLS #1843) that's helped thousands of families buy homes." },
     ],
   } as const,
+
+  // Direct pitch to a loan officer who lands on the page themselves.
+  loanOfficers: {
+    eyebrow: "Recruiting 2027 · For loan officers",
+    heading: "Build your business. Strengthen your future.",
+    question: "Is the company you're with today making you better?",
+    body: [
+      "Your experience, relationships, and work ethic deserve a company committed to helping you grow. We're recruiting experienced loan officers who take initiative, communicate clearly, and care about the people they serve.",
+      "You bring the relationships and drive. We bring guidance, collaboration, and resources to help you serve those relationships well. We'll walk through our compensation structure, company fees, and available support so you can evaluate the opportunity clearly.",
+    ],
+    lookingForHeading: "We're looking for action takers",
+    lookingFor: [
+      "3+ years of mortgage experience",
+      "Strong communication skills",
+      "The motivation to grow",
+      "Retail and wholesale loan officers welcome",
+    ],
+    cta: "Schedule a confidential conversation with Troy Warner, President & CEO.",
+  },
 
   share: {
     heading: "Know a loan officer who'd love Cancun?",
@@ -157,15 +178,19 @@ export const referral = {
       a: "Loan officers have a maximum comp plan of 2% lender-paid per closed loan. A 401(k) is offered to tenured employees.",
     },
     {
+      q: "I'm a loan officer. Can I talk to you directly?",
+      a: "Yes. If you have three or more years of mortgage experience, schedule a confidential conversation with Troy Warner, President & CEO. Call or text (801) 597-8832 or email loans@troywarner.com. Experienced retail and wholesale loan officers are welcome.",
+    },
+    {
       q: "Who runs the program and who do I contact?",
-      a: "The Partner/Recruiting Referral Program is run by CEO Troy Warner. Call (801) 597-8832 or email loans@troywarner.com for details.",
+      a: "The Partner/Recruiting Referral Program is run by Troy Warner, President & CEO. Call (801) 597-8832 or email loans@troywarner.com for details.",
     },
   ],
 
   jobPosting: {
     title: "Licensed Mortgage Loan Officer / Originator",
     description:
-      "<p>First Class Home Mortgage is hiring licensed mortgage loan officers (originators) with an active NMLS number. We support our loan officers with technology, competitive programs, and social media marketing and advertising. Maximum comp plan of 2% lender-paid per closed loan; 401(k) offered to tenured employees.</p>",
+      "<p>First Class Home Mortgage, an independent mortgage brokerage working with multiple wholesale lenders, is recruiting experienced licensed loan officers (originators) with an active NMLS number and three or more years of mortgage experience. Experienced retail and wholesale loan officers are welcome.</p><p>We offer accessible leadership, experienced processing support, ongoing training, and CRM, automation, and responsible AI tools that create more time for clients and referral partners. Maximum comp plan of 2% lender-paid per closed loan; 401(k) offered to tenured employees.</p>",
     // REVIEW: rolling 1-year window from migration date — replace with the
     // real posting date at cutover if this listing should have a fixed date.
     datePosted: "2026-09-10",

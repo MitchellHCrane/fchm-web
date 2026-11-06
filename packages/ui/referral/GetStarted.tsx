@@ -15,6 +15,10 @@ export function GetStarted() {
       <div className={styles.getStartedBackground}>
         <h2 className={styles.getStartedH2}>Who We Are</h2>
         <p className={styles.getStartedP}>{referral.who}</p>
+        <p className={styles.mission}>
+          <span className={styles.missionLabel}>Our mission</span>
+          {referral.mission}
+        </p>
         <dl className={styles.whoStats}>
           {referral.whoStats.map((s) => (
             <div key={s.label} className={styles.whoStat}>
