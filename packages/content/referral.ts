@@ -6,9 +6,9 @@
  */
 export const referral = {
   host: "referral.1stclasshomemortgage.com",
-  title: "First Class Home Mortgage | Loan Officer Referral Program",
+  title: "Join or Refer a Loan Officer | First Class Home Mortgage",
   description:
-    "Refer a licensed loan officer to First Class Home Mortgage and earn up to $695 per hire. Hiring originators in CA, CO, ID, NM, TX, UT & FL. NMLS #1843.",
+    "Now hiring experienced loan officers in CA, CO, ID, NM, TX, UT & FL. Join First Class Home Mortgage, or refer a loan officer and earn $695 per hire. NMLS #1843.",
   ogImage: "/referral/og-image-2026.jpg",
 
   ceo: {
@@ -30,23 +30,40 @@ export const referral = {
     "Florida",
   ],
 
+  // Two-path hero: Troy sends this link both to loan officers he wants to
+  // hire and to people who might know one. Each card scrolls to its path.
   hero: {
-    heading: "Loan Officer Referral Program",
-    tagline:
-      "We're hiring originators in California, Colorado, Idaho, New Mexico, Texas, Utah & Florida. Refer a licensed loan officer to First Class Home Mortgage and earn up to $695 per hire.",
-    stats: [
-      { value: "$695", label: "per loan officer hired" },
-      { value: "$25", label: "to Realtors when your referral interviews" },
-      { value: "10", label: "paid referrals per month" },
-    ],
+    heading: "Grow your career at First Class Home Mortgage",
+    subhead:
+      "Now hiring experienced loan officers in California, Colorado, Idaho, New Mexico, Texas, Utah & Florida.",
+    join: {
+      eyebrow: "I'm a loan officer",
+      title: "Join our team",
+      body: "Multiple wholesale lenders, up to 2% comp, real processing and leadership support, and President's Club trips for top producers.",
+      cta: "Apply to Join",
+      href: "#join",
+    },
+    refer: {
+      eyebrow: "I know a loan officer",
+      title: "Refer & earn $695",
+      body: "Send us a licensed loan officer. Earn $695 when they're hired and close a loan, plus $25 for Realtors when they interview.",
+      cta: "Refer a Loan Officer",
+      href: "#refer",
+    },
     video: {
       id: "dmEV-6MeL7Y",
       // Trip photo instead of YouTube's stock thumbnail.
       poster: "/referral/presidents-club/conference-1600.webp",
       title:
-        "Troy Warner explains the First Class Home Mortgage loan officer referral program",
+        "Why loan officers join First Class Home Mortgage",
     },
   },
+
+  referStats: [
+    { value: "$695", label: "per loan officer hired" },
+    { value: "$25", label: "to Realtors when your referral interviews" },
+    { value: "10", label: "paid referrals per month" },
+  ],
 
   formUrl: "https://fs10.formsite.com/twarner69/kdbphjilaj/index",
 
@@ -59,15 +76,15 @@ export const referral = {
     { value: "1,000s", label: "Families helped into homes" },
   ],
 
-  // What the referred loan officer gets — the pitch the referrer passes on.
+  // Join path: what a loan officer gets by joining.
   // Sourced from the "Recruiting 2027" flyer plus the existing comp/401(k)
   // and President's Club facts; don't add unverified perks.
   whyJoin: {
-    heading: "Why your referral will say yes",
-    intro: "You're not just sending a name. You're doing a loan officer a favor.",
+    eyebrow: "Join our team",
+    heading: "Why loan officers choose First Class",
     items: [
-      { icon: "options", title: "More options for their borrowers", body: "As an independent brokerage working with multiple wholesale lenders, they can find products and pricing that fit each client, from first-time buyers to self-employed borrowers and investors." },
-      { icon: "support", title: "Support that moves them forward", body: "Accessible leadership, experienced processing support, and a team willing to work through challenging scenarios together." },
+      { icon: "options", title: "More options for your borrowers", body: "As an independent brokerage working with multiple wholesale lenders, you can find products and pricing that fit each client, from first-time buyers to self-employed borrowers and investors." },
+      { icon: "support", title: "Support that moves you forward", body: "Accessible leadership, experienced processing support, and a team willing to work through challenging scenarios together." },
       { icon: "tech", title: "Technology that supports relationships", body: "CRM tools, automation, and responsible AI that strengthen follow-up, simplify routine work, and free up time for clients and referral partners." },
       { icon: "growth", title: "Keep learning, keep growing", body: "Hands-on leadership, team collaboration, and ongoing training, with a path toward a future leadership role." },
       { icon: "comp", title: "Up to 2% comp + 401(k)", body: "Max comp plan of 2% lender-paid per closed loan. 401(k) offered to tenured employees." },
@@ -103,7 +120,7 @@ export const referral = {
   presidentsClub: {
     eyebrow: "President's Club",
     heading: "Every year, our top loan officers go somewhere amazing",
-    body: "Each year CEO Troy Warner takes 10–16 of our top loan officers on a President's Club trip to an exotic beach resort. It's one of the biggest reasons loan officers join First Class Home Mortgage, and one more reason the loan officer you refer will want to say yes.",
+    body: "Each year CEO Troy Warner takes 10–16 of our top loan officers on a President's Club trip to an exotic beach resort. It's one of the biggest reasons loan officers join First Class Home Mortgage.",
     destinations: [
       "Costa Rica",
       "Cancun",

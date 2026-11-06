@@ -1,40 +1,40 @@
-import { LiteYouTube } from "./LiteYouTube";
 import { referral } from "@content/referral";
 import styles from "./Profile.module.css";
 
-/** Ported from troyReferralSite/src/Components/Profile.js */
+/**
+ * Two-path hero. Troy sends this one link to loan officers he wants to hire
+ * AND to people who might know one, so the first screen says plainly which
+ * is which and jumps each visitor to their section (#join / #refer).
+ */
 export function Profile() {
   const { hero } = referral;
+  const paths = [
+    { ...hero.join, variant: styles.join },
+    { ...hero.refer, variant: styles.refer },
+  ];
+
   return (
-    <div className={styles.profileDiv}>
-      <div className={styles.profileGrid}>
-        <div className={styles.columnPic} />
-        <div className={styles.centerDiv}>
-          <h1 className={styles.profileName}>{hero.heading}</h1>
-          <p className={styles.profileTagline}>{hero.tagline}</p>
+    <section className={styles.hero} aria-labelledby="hero-heading">
+      <div className={styles.intro}>
+        <h1 id="hero-heading" className={styles.heading}>
+          {hero.heading}
+        </h1>
+        <p className={styles.subhead}>{hero.subhead}</p>
+      </div>
 
-          <dl className={styles.stats}>
-            {hero.stats.map((s) => (
-              <div key={s.label} className={styles.stat}>
-                <dt className={styles.statLabel}>{s.label}</dt>
-                <dd className={styles.statValue}>{s.value}</dd>
-              </div>
-            ))}
-          </dl>
-
-          <LiteYouTube id={hero.video.id} title={hero.video.title} poster={hero.video.poster} />
-          <div className={styles.buttonBlueDiv}>
-            <a href={referral.formUrl} target="_blank" rel="noreferrer" className="button-blue">
-              Refer a Loan Officer
+      <div className={styles.paths}>
+        {paths.map((p) => (
+          <div key={p.href} className={`${styles.card} ${p.variant}`}>
+            <p className={styles.eyebrow}>{p.eyebrow}</p>
+            <h2 className={styles.cardTitle}>{p.title}</h2>
+            <p className={styles.cardBody}>{p.body}</p>
+            <a href={p.href} className={styles.cta}>
+              {p.cta}
+              <span aria-hidden="true"> ↓</span>
             </a>
           </div>
-          <p className={styles.secondaryLink}>
-            <a href="#getStarted">See program details</a>
-            <span className={styles.linkSep} aria-hidden="true">·</span>
-            <a href="#loan-officers">Are you a loan officer? Let&apos;s talk</a>
-          </p>
-        </div>
+        ))}
       </div>
-    </div>
+    </section>
   );
 }

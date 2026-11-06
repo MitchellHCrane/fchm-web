@@ -86,6 +86,27 @@
 
 .cta {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  margin: 16px auto 0;
+  gap: 12px;
+  margin: 40px auto 0;
+}
+.section .ctaJoin,
+.section .ctaRefer {
+  flex: 0 1 280px;
+  margin: 0;
+  padding: 14px 20px;
+  border-radius: var(--radius-md);
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 900;
+  text-align: center;
+}
+.section .ctaJoin {
+  background: #ffd400;
+  color: var(--color-primary-dark);
+}
+.section .ctaRefer {
+  background: var(--color-primary);
+  color: #fff;
 }

@@ -6,7 +6,7 @@ import { WhyJoin } from "@ui/referral/WhyJoin";
 import { LoanOfficers } from "@ui/referral/LoanOfficers";
 import { StickyCta } from "@ui/referral/StickyCta";
 import { HowItWorks } from "@ui/referral/HowItWorks";
-import { GetStarted } from "@ui/referral/GetStarted";
+import { ProgramDetails, WhoWeAre } from "@ui/referral/GetStarted";
 import { Faq } from "@ui/referral/Faq";
 import { Footer } from "@ui/referral/Footer";
 import { referral } from "@content/referral";
@@ -48,7 +48,8 @@ export default function ReferralPage() {
       <WhyJoin />
       <LoanOfficers />
       <HowItWorks />
-      <GetStarted />
+      <ProgramDetails />
+      <WhoWeAre />
       <Faq />
       <Footer />
       <StickyCta />

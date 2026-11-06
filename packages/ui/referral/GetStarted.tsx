@@ -2,8 +2,30 @@ import { CheckBadgeIcon, ClipboardDocumentListIcon, CurrencyDollarIcon } from "@
 import { referral } from "@content/referral";
 import styles from "./GetStarted.module.css";
 
-/** Ported from troyReferralSite/src/Components/GetStarted.js */
-export function GetStarted() {
+/** Ported from troyReferralSite/src/Components/GetStarted.js — now split in
+ *  two so Program Details sits in the refer path and Who We Are after it. */
+export function WhoWeAre() {
+  return (
+    <div className={styles.getStartedBackground}>
+      <h2 className={styles.getStartedH2}>Who We Are</h2>
+      <p className={styles.getStartedP}>{referral.who}</p>
+      <p className={styles.mission}>
+        <span className={styles.missionLabel}>Our mission</span>
+        {referral.mission}
+      </p>
+      <dl className={styles.whoStats}>
+        {referral.whoStats.map((s) => (
+          <div key={s.label} className={styles.whoStat}>
+            <dt className={styles.whoStatLabel}>{s.label}</dt>
+            <dd className={styles.whoStatValue}>{s.value}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  );
+}
+
+export function ProgramDetails() {
   const details = [
     { title: "Incentives", Icon: CurrencyDollarIcon, lines: referral.incentives },
     { title: "Eligibility", Icon: CheckBadgeIcon, lines: [referral.eligibility] },
@@ -12,23 +34,6 @@ export function GetStarted() {
 
   return (
     <div className={styles.getStartedDiv}>
-      <div className={styles.getStartedBackground}>
-        <h2 className={styles.getStartedH2}>Who We Are</h2>
-        <p className={styles.getStartedP}>{referral.who}</p>
-        <p className={styles.mission}>
-          <span className={styles.missionLabel}>Our mission</span>
-          {referral.mission}
-        </p>
-        <dl className={styles.whoStats}>
-          {referral.whoStats.map((s) => (
-            <div key={s.label} className={styles.whoStat}>
-              <dt className={styles.whoStatLabel}>{s.label}</dt>
-              <dd className={styles.whoStatValue}>{s.value}</dd>
-            </div>
-          ))}
-        </dl>
-      </div>
-
       <div className={styles.incentivesEligibility} id="getStarted">
         <h2 className={styles.detailsHeading}>Program Details</h2>
         <div className={styles.detailsGrid}>

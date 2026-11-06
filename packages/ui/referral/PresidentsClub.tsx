@@ -41,8 +41,11 @@ export function PresidentsClub() {
       </div>
 
       <div className={styles.cta}>
-        <a href={referral.formUrl} target="_blank" rel="noreferrer" className="button-blue">
-          Refer a Loan Officer
+        <a href={referral.hero.join.href} className={styles.ctaJoin}>
+          {referral.hero.join.cta}
+        </a>
+        <a href={referral.hero.refer.href} className={styles.ctaRefer}>
+          {referral.hero.refer.cta}
         </a>
       </div>
 

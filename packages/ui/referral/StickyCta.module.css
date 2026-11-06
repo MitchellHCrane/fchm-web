@@ -9,7 +9,8 @@
     height: 76px;
   }
   .bar {
-    display: block;
+    display: flex;
+    gap: 10px;
     position: fixed;
     inset: auto 0 0 0;
     z-index: 50;
@@ -18,16 +19,23 @@
     box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.12);
   }
   /* Beats `.legacy-typography a` on specificity. */
-  .bar .primary {
-    display: block;
+  .bar .join,
+  .bar .refer {
+    flex: 1;
     margin: 0;
-    padding: 14px 16px;
+    padding: 14px 8px;
     border-radius: var(--radius-md);
-    background: var(--color-primary);
-    color: #fff;
     font-family: var(--font-heading);
     font-size: 17px;
     font-weight: 900;
     text-align: center;
+  }
+  .bar .join {
+    background: #ffd400;
+    color: var(--color-primary-dark);
+  }
+  .bar .refer {
+    background: var(--color-primary);
+    color: #fff;
   }
 }
