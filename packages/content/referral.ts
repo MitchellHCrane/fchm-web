@@ -9,7 +9,7 @@ export const referral = {
   title: "First Class Home Mortgage | Loan Officer Referral Program",
   description:
     "Refer a licensed loan officer to First Class Home Mortgage and earn up to $695 per hire. Hiring originators in CA, CO, ID, NM, TX, UT & FL. NMLS #1843.",
-  ogImage: "/referral/og-image.png",
+  ogImage: "/referral/og-image-2026.jpg",
 
   ceo: {
     name: "Troy Warner",
