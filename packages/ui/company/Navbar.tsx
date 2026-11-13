@@ -1,17 +1,13 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState, type ReactNode } from "react";
 import {
   Dialog,
   DialogPanel,
   Disclosure,
   DisclosureButton,
   DisclosurePanel,
-  Popover,
-  PopoverButton,
-  PopoverGroup,
-  PopoverPanel,
 } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { ChevronDownIcon, PhoneIcon, EnvelopeIcon } from "@heroicons/react/20/solid";
@@ -29,6 +25,55 @@ import { companyContent, formatPhone } from "@content/company";
  * never shows "/company/...". Direct access to "/company/<domain>/..." (e.g.
  * in local dev or the bare Netlify URL) is for build verification only.
  */
+/**
+ * Desktop dropdown that opens on mouse hover (with a short close delay so the
+ * pointer can travel to the panel). Click/tap and Enter/Space still toggle it,
+ * so touch screens and keyboards work; Escape or tabbing away closes it.
+ */
+function HoverMenu({ label, panelClassName, children }: { label: string; panelClassName: string; children: ReactNode }) {
+  const [open, setOpen] = useState(false);
+  const closeTimer = useRef<number | undefined>(undefined);
+  const show = () => {
+    window.clearTimeout(closeTimer.current);
+    setOpen(true);
+  };
+  const hide = () => {
+    window.clearTimeout(closeTimer.current);
+    closeTimer.current = window.setTimeout(() => setOpen(false), 150);
+  };
+
+  return (
+    <div
+      className="relative"
+      onPointerEnter={(e) => e.pointerType === "mouse" && show()}
+      onPointerLeave={(e) => e.pointerType === "mouse" && hide()}
+      onBlur={(e) => {
+        if (!e.currentTarget.contains(e.relatedTarget as Node | null)) setOpen(false);
+      }}
+      onKeyDown={(e) => e.key === "Escape" && setOpen(false)}
+    >
+      <button
+        type="button"
+        aria-expanded={open}
+        aria-haspopup="true"
+        onClick={() => setOpen((o) => !o)}
+        className="flex items-center text-white gap-x-1 cursor-pointer"
+      >
+        {label}
+        <ChevronDownIcon aria-hidden="true" className={`size-5 flex-none text-white transition-transform duration-300 ease-in-out ${open ? "rotate-180" : ""}`} />
+      </button>
+      {/* pt-3 (not mt-3) so there's no hover gap between button and panel */}
+      <div
+        className={`absolute right-0 top-full z-10 pt-3 transition duration-150 ease-out ${
+          open ? "visible opacity-100 translate-y-0" : "invisible opacity-0 translate-y-1"
+        }`}
+      >
+        <div className={panelClassName}>{children}</div>
+      </div>
+    </div>
+  );
+}
+
 export function Navbar({ phone }: { phone: string }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const formattedPhone = formatPhone(phone);
@@ -64,32 +109,18 @@ export function Navbar({ phone }: { phone: string }) {
             <Bars3Icon aria-hidden="true" className="size-6" />
           </button>
         </div>
-        <PopoverGroup className="hidden items-center lg:flex lg:gap-x-8">
-          <Popover className="relative">
-            <PopoverButton className="flex items-center text-white gap-x-1 cursor-pointer">
-              Resources
-              <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-white" />
-            </PopoverButton>
-            <PopoverPanel
-              transition
-              className="absolute right-0 top-full z-10 mt-3 w-56 rounded-xl bg-white p-2 shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
-            >
+        <div className="hidden items-center lg:flex lg:gap-x-8">
+          <HoverMenu label="Resources" panelClassName="w-56 rounded-xl bg-white p-2 shadow-lg ring-1 ring-gray-900/5">
               {resources.map((item) => (
                 <a key={item.name} href={item.href} className="block rounded-lg px-3 py-2 hover:bg-gray-50" target={item.target}>
                   {item.name}
                 </a>
               ))}
-            </PopoverPanel>
-          </Popover>
-          <Popover className="relative">
-            <PopoverButton className="flex text-white items-center gap-x-1 cursor-pointer">
-              Contact
-              <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-white" />
-            </PopoverButton>
-            <PopoverPanel
-              transition
-              className="absolute right-0 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
-            >
+          </HoverMenu>
+          <HoverMenu
+            label="Contact"
+            panelClassName="w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5"
+          >
               <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
                 {callsToAction.map((item) => (
                   <a key={item.name} href={item.href} className="flex items-center justify-center gap-x-2.5 p-3 hover:bg-gray-100">
@@ -98,8 +129,7 @@ export function Navbar({ phone }: { phone: string }) {
                   </a>
                 ))}
               </div>
-            </PopoverPanel>
-          </Popover>
+          </HoverMenu>
           <a href="/testimonials" className="flex text-white items-center gap-x-1 cursor-pointer">
             Testimonials
           </a>
@@ -109,7 +139,7 @@ export function Navbar({ phone }: { phone: string }) {
           >
             Call {formattedPhone}
           </a>
-        </PopoverGroup>
+        </div>
       </nav>
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
         <div className="fixed inset-0 z-40 pointer-events-none" />

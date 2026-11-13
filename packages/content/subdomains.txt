@@ -45,4 +45,4 @@ tresa         -                                       deleted  # Tresa Bertlshof
 # Microsites / company (later phases):
 referral      referral.1stclasshomemortgage.com       live   # also historically troy., start.troywarner.com
 dpa           dpa.1stclasshomemortgage.com            live
-company       1stclasshomemortgage.com + firstclasshomemortgage.com  live
+company       1stclasshomemortgage.com (firstclasshomemortgage.com 301s here)  live

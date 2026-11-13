@@ -1,6 +1,5 @@
 import Image from "next/image";
-import type { PostalAddress } from "@content/schema";
-import { companyContent, formatPhone } from "@content/company";
+import { companyContact, companyContent, formatPhone } from "@content/company";
 
 const socialIcons: { name: string; href: string; path: string; viewBox?: string }[] = [
   {
@@ -26,11 +25,12 @@ const socialIcons: { name: string; href: string; path: string; viewBox?: string 
 ];
 
 /** Ported from 1stclassnextjs/src/app/components/Footer.js */
-export function Footer({ phone, address }: { phone: string; address: PostalAddress }) {
-  const formattedPhone = formatPhone(phone).replace(/^(\d{3})-(\d{3})-(\d{4})$/, "($1)-$2-$3");
-
-  const contact = [
-    { name: formattedPhone, href: `tel:${phone}` },
+export function Footer() {
+  const contact: { name: string; href?: string }[] = [
+    ...companyContact.phones.map(({ label, phone }) => ({
+      name: `${label}: ${formatPhone(phone)}`,
+      href: `tel:${phone}`,
+    })),
     { name: companyContent.email, href: `mailto:${companyContent.email}` },
     { name: `Fax: ${companyContent.fax}` },
   ];
@@ -79,15 +79,19 @@ export function Footer({ phone, address }: { phone: string; address: PostalAddre
             </ul>
           </div>
           <div>
-            <h3 className="text-sm/6 font-semibold text-gray-900">Address</h3>
+            <h3 className="text-sm/6 font-semibold text-gray-900">Offices</h3>
             <div className="mt-6 space-y-4">
-              <p className="text-sm/6 text-gray-600 hover:text-gray-900">
-                <a href={address.mapsUrl} target="_blank" rel="noreferrer">
-                  {address.line1}
+              {companyContact.offices.map(({ label, address }) => (
+                <p key={label} className="text-sm/6 text-gray-600 hover:text-gray-900">
+                  <span className="font-semibold text-gray-900">{label}</span>
                   <br />
-                  {address.line2}
-                </a>
-              </p>
+                  <a href={address.mapsUrl} target="_blank" rel="noreferrer">
+                    {address.line1}
+                    <br />
+                    {address.line2}
+                  </a>
+                </p>
+              ))}
             </div>
           </div>
         </div>

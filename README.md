@@ -16,10 +16,9 @@ Netlify site.
   (`referral.1stclasshomemortgage.com`).
 - **DPA microsite** — `packages/content/dpa.ts` (serializable rich text, not
   JSX) + `app/dpa/` (`dpa.1stclasshomemortgage.com`).
-- **Company site** — `packages/content/company.ts` maps each apex domain to its
-  own address/phone (replacing per-domain `NEXT_PUBLIC_*` env vars, which can't
-  vary per request in one deploy) + `app/company/[domain]/`
-  (`1stclasshomemortgage.com`, `firstclasshomemortgage.com`).
+- **Company site** — `packages/content/company.ts` (domain, offices, phone
+  numbers) + `app/company/[domain]/` (`1stclasshomemortgage.com`). The old
+  `firstclasshomemortgage.com` domain 301-redirects there.
 - Shared content (disclosures, corporate address, brand, links) lives once in
   `packages/config/site.ts`. Shared UI is namespaced per tier under
   `packages/ui/{sections,company,referral,dpa}/`; shared SEO (metadata + JSON-LD)

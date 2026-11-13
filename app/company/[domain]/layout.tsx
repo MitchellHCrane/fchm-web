@@ -28,7 +28,7 @@ export default async function CompanyLayout({
       <Navbar phone={tenant.phone} />
       <Banner />
       {children}
-      <Footer phone={tenant.phone} address={tenant.address} />
+      <Footer />
     </div>
   );
 }

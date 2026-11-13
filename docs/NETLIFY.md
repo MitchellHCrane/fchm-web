@@ -29,7 +29,10 @@ completed 2026-09-10) — each needs its own custom domain added to the one
 `fchm-web` Netlify site (not the wildcard record):
 - `referral.1stclasshomemortgage.com` → `app/referral/`
 - `dpa.1stclasshomemortgage.com` → `app/dpa/`
-- `1stclasshomemortgage.com` + `firstclasshomemortgage.com` → `app/company/[domain]/`
+- `1stclasshomemortgage.com` → `app/company/[domain]/`
+- `firstclasshomemortgage.com` (+ `www`) → 301 to `1stclasshomemortgage.com`.
+  Keep it attached to this site: its Netlify DNS zone holds the Microsoft 365
+  email records (MX, SPF, DKIM, DMARC, autodiscover). Don't move its nameservers.
 
 Still on its own domain, not part of `fchm-web`:
 - `troywarner.com` + `start.troywarner.com` — Troy's own domain (2 GitHub
