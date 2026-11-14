@@ -30,7 +30,7 @@ export default defineOfficer({
 
   application: { kind: "my1003", nmls: "102983" },
   filedropUrl: "https://documentguardian.com/filedrop/loans@troywarner.com",
-  reviewUrl: "https://g.page/r/CStPPIWpW1rHEAg/review",
+  reviewUrl: "https://g.page/r/CSU4NOyNMXXPEBE/review",
   calendlyUrl: "https://calendly.com/troywarnerloans",
 
   sections: ["whyChoose"],

@@ -51,7 +51,7 @@ export const shared: SharedConfig = {
     creditSmart: "https://creditsmart.freddiemac.com/paths/homebuyer-u/",
     dpa: "https://dpa.1stclasshomemortgage.com/",
     referral: "https://referral.1stclasshomemortgage.com/",
-    corporateReview: "https://g.page/r/CStPPIWpW1rHEAg/review",
+    corporateReview: "https://g.page/r/CSU4NOyNMXXPEBE/review",
     corporateMaps: "https://goo.gl/maps/o97dcDxGxFcAcRheA",
   },
 
